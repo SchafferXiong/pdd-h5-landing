@@ -1,0 +1,51 @@
+{
+  "source": {
+    "detailPage": "https://app.mi.com/details?id=com.xunmeng.pinduoduo",
+    "fetchedAt": "2026-03-02"
+  },
+  "brand": {
+    "name": "拼多多",
+    "tagline": "多实惠 多乐趣",
+    "logoUrl": "./assets/img/logo/pdd-logo.png"
+  },
+  "media": {
+    "heroMain4s": "./assets/video/hero-main-4s.mp4",
+    "benefit8s": "./assets/video/benefit-8s.mp4",
+    "posters": {
+      "hero": "./assets/video/hero-poster.jpg",
+      "benefit": "./assets/video/benefit-poster.jpg"
+    },
+    "screenshots": [
+      "./assets/img/screens/shot1.jpg",
+      "./assets/img/screens/shot2.jpg",
+      "./assets/img/screens/shot3.jpg",
+      "./assets/img/screens/shot4.jpg",
+      "./assets/img/screens/shot5.jpg"
+    ]
+  },
+  "timing": {
+    "heroBeats": [
+      { "start": 0.0, "end": 0.8, "title": "省多多小金库", "sub": "品牌记忆点直达" },
+      { "start": 0.8, "end": 2.0, "title": "百亿补贴·官方直补", "sub": "全网低价 + 单单返现折上折" },
+      { "start": 2.0, "end": 3.2, "title": "天天领现金", "sub": "微信打款 秒到账" },
+      { "start": 3.2, "end": 4.0, "title": "立即下载", "sub": "抢限时福利窗口" }
+    ],
+    "benefitBeats": [
+      { "start": 0.0, "end": 2.0, "title": "万人团", "sub": "一件也是批发价" },
+      { "start": 2.0, "end": 4.0, "title": "商家入驻", "sub": "0佣金 千亿扶持" },
+      { "start": 4.0, "end": 6.0, "title": "买菜更省", "sub": "限时抽 全额返券" },
+      { "start": 6.0, "end": 8.0, "title": "全域优惠", "sub": "百亿补贴 + 秒杀联动" }
+    ]
+  },
+  "cta": {
+    "buttonText": "立即下载拼多多",
+    "androidUrl": "https://app.mi.com/details?id=com.xunmeng.pinduoduo"
+  },
+  "benefits": [
+    "百亿补贴 / 全网低价 / 官方直补 / 单单返现折上折",
+    "天天领现金 / 微信打款 / 秒到账",
+    "商家入驻 0佣金 / 千亿扶持",
+    "万人团 / 一件也是批发价",
+    "省多多小金库 / 多实惠 多乐趣"
+  ]
+}

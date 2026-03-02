@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>拼多多 - 多实惠 多乐趣</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:wght@500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <img id="brandLogo" class="brand-logo" src="./assets/img/logo/pdd-logo.png" alt="拼多多logo" />
+          <div class="brand-meta">
+            <strong class="brand-name">拼多多</strong>
+            <span class="brand-sub">多实惠 多乐趣</span>
+          </div>
+        </div>
+        <button class="cta cta-mini" data-source="topbar">极速下载</button>
+      </header>
+
+      <main>
+        <section class="hero-stage" id="heroStage">
+          <div class="stage-noise"></div>
+          <div class="stage-blob blob-a"></div>
+          <div class="stage-blob blob-b"></div>
+
+          <div class="stage-shell" id="stageShell">
+            <video
+              id="heroVideo"
+              class="stage-video"
+              muted
+              playsinline
+              webkit-playsinline
+              preload="auto"
+              autoplay
+              loop
+              poster="./assets/video/hero-poster.jpg"
+            >
+              <source src="./assets/video/hero-main-4s.mp4" type="video/mp4" />
+            </video>
+
+            <div class="video-vignette"></div>
+            <div class="video-shine"></div>
+
+            <div class="beat-chips" id="heroChips" aria-live="polite"></div>
+
+            <div class="beat-copy">
+              <h1 id="heroBeatTitle">省多多小金库</h1>
+              <p id="heroBeatSub">品牌记忆点直达</p>
+            </div>
+
+            <button class="cta cta-main" data-source="hero">立即下载领福利</button>
+            <div class="stage-ring"></div>
+          </div>
+
+          <div class="hero-badges">
+            <span class="badge">百亿补贴</span>
+            <span class="badge">官方直补</span>
+            <span class="badge">单单返现折上折</span>
+          </div>
+        </section>
+
+        <section class="benefit-sync" id="benefitSection">
+          <div class="section-head">
+            <h2>8秒利益强化</h2>
+            <p>滚动即触发，补齐转化理由链路</p>
+          </div>
+
+          <div class="benefit-layout">
+            <div class="benefit-video-shell" id="benefitVideoShell">
+              <video
+                id="benefitVideo"
+                class="benefit-video"
+                muted
+                playsinline
+                webkit-playsinline
+                preload="metadata"
+                loop
+                poster="./assets/video/benefit-poster.jpg"
+              >
+                <source src="./assets/video/benefit-8s.mp4" type="video/mp4" />
+              </video>
+              <div class="benefit-overlay" id="benefitOverlay">
+                <strong id="benefitBeatTitle">万人团</strong>
+                <span id="benefitBeatSub">一件也是批发价</span>
+              </div>
+            </div>
+
+            <div class="benefit-cards" id="benefitCards"></div>
+          </div>
+        </section>
+
+        <section class="proof-section">
+          <div class="section-head">
+            <h2>来自官方截图的核心利益点</h2>
+            <p>素材来源：小米应用商店拼多多详情页（2026-03-02）</p>
+          </div>
+
+          <div class="proof-carousel" id="proofCarousel"></div>
+
+          <ul class="proof-points" id="proofPoints"></ul>
+        </section>
+
+        <section class="urgency-section">
+          <div class="urgency-card">
+            <div class="urgency-title">限时福利窗口</div>
+            <div class="urgency-timer" id="countdown">04:00</div>
+            <p>窗口结束前完成下载，立即解锁补贴与返现权益</p>
+            <button class="cta cta-strong" data-source="urgency">立即下载拼多多</button>
+          </div>
+        </section>
+      </main>
+
+      <button class="sticky-cta" id="stickyCta" data-source="sticky">
+        <span>现在下载</span>
+        <small>百亿补贴 · 天天领现金</small>
+      </button>
+    </div>
+
+    <script>
+      window.__LP_CONFIG = {
+        manifestPath: './assets/manifest.json'
+      };
+    </script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
