@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-label="Group rush illustration">
+  <defs>
+    <linearGradient id="bgC" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#3a0600" />
+      <stop offset="0.46" stop-color="#bf1b0a" />
+      <stop offset="1" stop-color="#ff7f24" />
+    </linearGradient>
+    <radialGradient id="pulse" cx="0.5" cy="0.3" r="0.72">
+      <stop offset="0" stop-color="#fff3be" stop-opacity="0.92" />
+      <stop offset="1" stop-color="#fff3be" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="ring" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ffd96f" />
+      <stop offset="1" stop-color="#ff6027" />
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="900" fill="url(#bgC)" />
+  <circle cx="360" cy="240" r="250" fill="url(#pulse)" />
+
+  <g stroke="url(#ring)" stroke-width="14" fill="none" opacity="0.8">
+    <circle cx="360" cy="640" r="168" />
+    <circle cx="360" cy="640" r="116" />
+    <circle cx="360" cy="640" r="64" />
+  </g>
+
+  <g transform="translate(128 212)">
+    <rect x="0" y="0" width="464" height="230" rx="32" fill="#290400" fill-opacity="0.34" stroke="#ffe6ae" stroke-opacity="0.42" />
+    <text x="38" y="82" font-family="'Noto Sans SC', sans-serif" font-size="42" font-weight="700" fill="#fff4cf">GROUP BUY RUSH</text>
+    <text x="38" y="138" font-family="'Noto Sans SC', sans-serif" font-size="26" fill="#ffe4be">JOIN INSTANTLY, KEEP LOW PRICE</text>
+    <g transform="translate(38 168)">
+      <rect x="0" y="0" width="388" height="20" rx="10" fill="#fff2d4" fill-opacity="0.22" />
+      <rect x="0" y="0" width="356" height="20" rx="10" fill="url(#ring)" />
+    </g>
+  </g>
+
+  <g fill="#ffd979">
+    <circle cx="360" cy="640" r="20" />
+    <circle cx="524" cy="640" r="15" />
+    <circle cx="196" cy="640" r="15" />
+    <circle cx="360" cy="480" r="15" />
+    <circle cx="360" cy="796" r="15" />
+    <circle cx="476" cy="526" r="13" />
+    <circle cx="244" cy="526" r="13" />
+    <circle cx="476" cy="754" r="13" />
+    <circle cx="244" cy="754" r="13" />
+  </g>
+
+  <g stroke="#ffe8ba" stroke-width="5" stroke-linecap="round" opacity="0.84">
+    <line x1="360" y1="640" x2="524" y2="640" />
+    <line x1="360" y1="640" x2="196" y2="640" />
+    <line x1="360" y1="640" x2="360" y2="480" />
+    <line x1="360" y1="640" x2="360" y2="796" />
+    <line x1="360" y1="640" x2="476" y2="526" />
+    <line x1="360" y1="640" x2="244" y2="526" />
+    <line x1="360" y1="640" x2="476" y2="754" />
+    <line x1="360" y1="640" x2="244" y2="754" />
+  </g>
+</svg>

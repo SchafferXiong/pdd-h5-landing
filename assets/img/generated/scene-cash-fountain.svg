@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-label="Cash flow illustration">
+  <defs>
+    <linearGradient id="bgB" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2f0400" />
+      <stop offset="0.42" stop-color="#9d1206" />
+      <stop offset="1" stop-color="#ff5a21" />
+    </linearGradient>
+    <radialGradient id="orbB" cx="0.7" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#fff0b9" stop-opacity="0.95" />
+      <stop offset="1" stop-color="#fff0b9" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="flow" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffe379" />
+      <stop offset="1" stop-color="#ff6e2e" />
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="900" fill="url(#bgB)" />
+  <circle cx="540" cy="160" r="220" fill="url(#orbB)" />
+
+  <g opacity="0.34" fill="#ffefcb">
+    <circle cx="110" cy="190" r="5" />
+    <circle cx="180" cy="130" r="4" />
+    <circle cx="260" cy="200" r="6" />
+    <circle cx="370" cy="120" r="5" />
+    <circle cx="450" cy="210" r="7" />
+    <circle cx="580" cy="140" r="5" />
+    <circle cx="660" cy="220" r="6" />
+  </g>
+
+  <g transform="translate(88 218)">
+    <rect x="0" y="0" width="544" height="260" rx="34" fill="#2a0400" fill-opacity="0.32" stroke="#ffe5ad" stroke-opacity="0.44" />
+    <text x="42" y="88" font-family="'Noto Sans SC', sans-serif" font-size="40" font-weight="700" fill="#fff4d0">CASH BACK STREAM</text>
+    <text x="42" y="142" font-family="'Noto Sans SC', sans-serif" font-size="26" fill="#ffe4bc">INSTANT RETURN ON EACH ORDER</text>
+
+    <g transform="translate(42 176)">
+      <rect x="0" y="0" width="460" height="46" rx="23" fill="#fff1d2" fill-opacity="0.2" />
+      <rect x="0" y="0" width="398" height="46" rx="23" fill="url(#flow)" />
+      <text x="24" y="30" font-family="'Noto Sans SC', sans-serif" font-size="24" font-weight="700" fill="#501600">ARRIVAL SPEED 2s</text>
+    </g>
+  </g>
+
+  <path d="M90 710 C170 620 280 650 360 560 C430 480 530 500 630 430" stroke="#ffd96e" stroke-width="20" stroke-linecap="round" fill="none" opacity="0.78" />
+  <path d="M120 780 C210 700 310 720 400 640 C480 570 560 580 650 520" stroke="#ff7d2d" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.72" />
+
+  <g fill="#ffefc4" opacity="0.9">
+    <rect x="130" y="650" width="52" height="38" rx="9" />
+    <rect x="240" y="618" width="52" height="38" rx="9" />
+    <rect x="350" y="592" width="52" height="38" rx="9" />
+    <rect x="468" y="560" width="52" height="38" rx="9" />
+  </g>
+</svg>

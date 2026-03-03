@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-label="Subsidy wave illustration">
+  <defs>
+    <linearGradient id="bgA" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#5f0500" />
+      <stop offset="0.45" stop-color="#b81804" />
+      <stop offset="1" stop-color="#ff7d22" />
+    </linearGradient>
+    <radialGradient id="orbA" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#ffe49a" stop-opacity="1" />
+      <stop offset="1" stop-color="#ffe49a" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="bandA" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ffd96a" />
+      <stop offset="1" stop-color="#ff3e1d" />
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="900" fill="url(#bgA)" />
+  <circle cx="190" cy="190" r="230" fill="url(#orbA)" />
+  <circle cx="590" cy="130" r="110" fill="#fff3cd" fill-opacity="0.24" />
+
+  <g opacity="0.38">
+    <rect x="42" y="120" width="636" height="1" fill="#fff3d0" />
+    <rect x="42" y="180" width="636" height="1" fill="#fff3d0" />
+    <rect x="42" y="240" width="636" height="1" fill="#fff3d0" />
+    <rect x="42" y="300" width="636" height="1" fill="#fff3d0" />
+    <rect x="42" y="360" width="636" height="1" fill="#fff3d0" />
+  </g>
+
+  <path d="M0 530 C130 470 200 640 320 560 C420 500 510 590 720 500 L720 900 L0 900 Z" fill="#ff2f1f" fill-opacity="0.56" />
+  <path d="M0 620 C120 560 220 720 360 650 C460 600 570 690 720 610 L720 900 L0 900 Z" fill="url(#bandA)" fill-opacity="0.72" />
+
+  <g transform="translate(120 250)">
+    <rect x="0" y="0" width="480" height="220" rx="30" fill="#2d0500" fill-opacity="0.34" stroke="#ffe4ad" stroke-opacity="0.48" />
+    <text x="36" y="86" font-family="'Noto Sans SC', sans-serif" font-size="44" font-weight="700" fill="#fff3c9">100B SUBSIDY</text>
+    <text x="36" y="142" font-family="'Noto Sans SC', sans-serif" font-size="28" fill="#ffe5be">OFFICIAL PRICE SUPPORT</text>
+    <rect x="36" y="165" width="408" height="18" rx="9" fill="#fff3d7" fill-opacity="0.28" />
+    <rect x="36" y="165" width="365" height="18" rx="9" fill="#ffd86f" />
+  </g>
+</svg>

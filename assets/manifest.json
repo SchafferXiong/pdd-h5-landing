@@ -1,8 +1,4 @@
 {
-  "source": {
-    "detailPage": "https://app.mi.com/details?id=com.xunmeng.pinduoduo",
-    "fetchedAt": "2026-03-02"
-  },
   "brand": {
     "name": "拼多多",
     "tagline": "多实惠 多乐趣",
@@ -14,14 +10,7 @@
     "posters": {
       "hero": "./assets/video/hero-poster.jpg",
       "benefit": "./assets/video/benefit-poster.jpg"
-    },
-    "screenshots": [
-      "./assets/img/screens/shot1.jpg",
-      "./assets/img/screens/shot2.jpg",
-      "./assets/img/screens/shot3.jpg",
-      "./assets/img/screens/shot4.jpg",
-      "./assets/img/screens/shot5.jpg"
-    ]
+    }
   },
   "timing": {
     "heroBeats": [
@@ -47,5 +36,31 @@
     "商家入驻 0佣金 / 千亿扶持",
     "万人团 / 一件也是批发价",
     "省多多小金库 / 多实惠 多乐趣"
+  ],
+  "generatedScenes": [
+    {
+      "title": "百亿补贴矩阵",
+      "caption": "官方直补 + 全网低价，首屏直接感知高性价比。",
+      "image": "./assets/img/generated/scene-subsidy-wave.svg",
+      "widgetLabel": "补贴命中率",
+      "widgetValue": "98%",
+      "meter": 98
+    },
+    {
+      "title": "天天返现流",
+      "caption": "下单返现与现金到账并行，形成即时获得感。",
+      "image": "./assets/img/generated/scene-cash-fountain.svg",
+      "widgetLabel": "到账速度",
+      "widgetValue": "2s",
+      "meter": 86
+    },
+    {
+      "title": "万人团秒跟进",
+      "caption": "一件也享批发价，群体下单氛围持续拉升转化。",
+      "image": "./assets/img/generated/scene-group-rush.svg",
+      "widgetLabel": "拼团热度",
+      "widgetValue": "9.8",
+      "meter": 93
+    }
   ]
 }

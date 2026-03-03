@@ -11,14 +11,7 @@
       posters: {
         hero: './assets/video/hero-poster.jpg',
         benefit: './assets/video/benefit-poster.jpg'
-      },
-      screenshots: [
-        './assets/img/screens/shot1.jpg',
-        './assets/img/screens/shot2.jpg',
-        './assets/img/screens/shot3.jpg',
-        './assets/img/screens/shot4.jpg',
-        './assets/img/screens/shot5.jpg'
-      ]
+      }
     },
     timing: {
       heroBeats: [
@@ -44,6 +37,32 @@
       '商家入驻 0佣金 / 千亿扶持',
       '万人团 / 一件也是批发价',
       '省多多小金库 / 多实惠 多乐趣'
+    ],
+    generatedScenes: [
+      {
+        title: '百亿补贴矩阵',
+        caption: '官方直补 + 全网低价，首屏直接感知高性价比。',
+        image: './assets/img/generated/scene-subsidy-wave.svg',
+        widgetLabel: '补贴命中率',
+        widgetValue: '98%',
+        meter: 98
+      },
+      {
+        title: '天天返现流',
+        caption: '下单返现与现金到账并行，形成即时获得感。',
+        image: './assets/img/generated/scene-cash-fountain.svg',
+        widgetLabel: '到账速度',
+        widgetValue: '2s',
+        meter: 86
+      },
+      {
+        title: '万人团秒跟进',
+        caption: '一件也享批发价，群体下单氛围持续拉升转化。',
+        image: './assets/img/generated/scene-group-rush.svg',
+        widgetLabel: '拼团热度',
+        widgetValue: '9.8',
+        meter: 93
+      }
     ]
   };
 
@@ -56,8 +75,8 @@
   const benefitBeatTitle = document.getElementById('benefitBeatTitle');
   const benefitBeatSub = document.getElementById('benefitBeatSub');
   const benefitCards = document.getElementById('benefitCards');
-  const proofCarousel = document.getElementById('proofCarousel');
-  const proofPoints = document.getElementById('proofPoints');
+  const valueCanvas = document.getElementById('valueCanvas');
+  const benefitMarquee = document.getElementById('benefitMarquee');
   const countdown = document.getElementById('countdown');
 
   const state = {
@@ -97,6 +116,8 @@
     [...benefitCards.children].forEach((card, i) => {
       card.classList.toggle('active', i === index);
     });
+
+    setSceneFocus(index);
   };
 
   window.setCtaIntensity = function setCtaIntensity(level) {
@@ -210,21 +231,65 @@
       .join('');
   }
 
-  function renderProof(config) {
-    const shotLabels = ['百亿补贴', '多多买菜', '9块9秒杀', '天天领现金', '万人团'];
+  function getScenes(config) {
+    if (Array.isArray(config.generatedScenes) && config.generatedScenes.length) return config.generatedScenes;
+    return fallbackConfig.generatedScenes;
+  }
 
-    proofCarousel.innerHTML = config.media.screenshots
-      .map(
-        (src, idx) => `
-          <figure class="proof-item">
-            <img src="${src}" alt="拼多多官方截图${idx + 1}" loading="lazy" />
-            <figcaption class="label">${shotLabels[idx] || `官方截图 ${idx + 1}`}</figcaption>
-          </figure>
-        `
-      )
+  function setSceneFocus(index) {
+    if (!valueCanvas) return;
+    const cards = [...valueCanvas.children];
+    if (!cards.length) return;
+    const safeIndex = Math.max(0, index % cards.length);
+
+    cards.forEach((card, i) => {
+      card.classList.toggle('active', i === safeIndex);
+    });
+  }
+
+  function renderValueCanvas(config) {
+    if (!valueCanvas) return;
+    const scenes = getScenes(config);
+    valueCanvas.innerHTML = scenes
+      .map((scene, idx) => {
+        const meter = Math.max(20, Math.min(100, Number(scene.meter) || 75));
+        return `
+          <article class="scene-card ${idx === 0 ? 'active' : ''}" style="--delay:${idx * 0.08}s">
+            <figure class="scene-image-wrap">
+              <img class="scene-image" src="${scene.image}" alt="${scene.title}" loading="lazy" />
+            </figure>
+            <div class="scene-meta">
+              <div class="scene-kicker">AI 视觉图层</div>
+              <h3>${scene.title}</h3>
+              <p>${scene.caption}</p>
+              <div class="scene-widget">
+                <span>${scene.widgetLabel}</span>
+                <strong>${scene.widgetValue}</strong>
+                <div class="widget-meter"><i style="--meter:${meter}%"></i></div>
+              </div>
+            </div>
+          </article>
+        `;
+      })
       .join('');
+  }
 
-    proofPoints.innerHTML = config.benefits.map((item) => `<li>${item}</li>`).join('');
+  function renderBenefitMarquee(config) {
+    if (!benefitMarquee) return;
+    const source = Array.isArray(config.benefits) ? config.benefits : fallbackConfig.benefits;
+    const tags = [...new Set(source.flatMap((item) => item.split('/').map((s) => s.trim()).filter(Boolean)))];
+
+    benefitMarquee.innerHTML = `
+      <div class="marquee-track">
+        ${tags
+          .slice(0, 12)
+          .map(
+            (tag, idx) =>
+              `<span class="marquee-pill" style="--delay:${(idx * 0.05).toFixed(2)}s">${tag.replace(/\s+/g, ' ')}</span>`
+          )
+          .join('')}
+      </div>
+    `;
   }
 
   function startCountdown(totalSec = 240) {
@@ -297,7 +362,8 @@
 
     renderHeroChips(config.timing.heroBeats);
     renderBenefitCards(config.timing.benefitBeats);
-    renderProof(config);
+    renderValueCanvas(config);
+    renderBenefitMarquee(config);
   }
 
   async function init() {
