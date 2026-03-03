@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>App H5 V2 · Hybrid Framework</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="v2-page" id="page" data-cta-intensity="1">
+      <header class="topbar">
+        <div class="brand">
+          <img id="brandLogo" class="logo" alt="App logo" />
+          <div>
+            <p class="name" id="brandName">拼多多</p>
+            <p class="slogan" id="brandSlogan">多实惠 多乐趣</p>
+          </div>
+        </div>
+        <button class="quick-btn" data-source="topbar" id="quickCta">立即下载</button>
+      </header>
+
+      <main>
+        <section class="hero" aria-label="首屏">
+          <div class="industry-tabs" id="industryTabs"></div>
+
+          <div class="stage" id="heroStage">
+            <div class="layer mesh"></div>
+            <div class="layer glow"></div>
+            <div class="layer streak"></div>
+            <div class="layer grain"></div>
+
+            <ul class="beat-chips" id="beatChips" aria-live="polite"></ul>
+
+            <div class="hero-copy">
+              <h1 id="heroTitle">百亿补贴</h1>
+              <p id="heroSub">官方直补 价格更狠</p>
+            </div>
+
+            <div class="widget-row" id="widgetRow"></div>
+
+            <button class="cta-main" data-source="hero" id="heroCta">立即下载</button>
+          </div>
+        </section>
+
+        <section class="benefit" id="benefitSection" aria-label="福利">
+          <div class="section-head">
+            <h2>热门权益</h2>
+            <p id="sectionSub">下载即可参与</p>
+          </div>
+
+          <div class="benefit-stage">
+            <div class="benefit-highlight" id="benefitHighlight">
+              <strong id="storyTitle">限时直补</strong>
+              <span id="storySub">核心爆款持续低价</span>
+              <em id="storyMetric">低至5折</em>
+            </div>
+            <div class="benefit-cards" id="storyCards" role="list"></div>
+          </div>
+
+          <button class="cta-sub" data-source="story">继续下载解锁</button>
+        </section>
+
+        <section class="urgency" aria-label="倒计时">
+          <article class="urgency-card">
+            <p class="label" id="urgencyLabel">限时福利进行中</p>
+            <h3>倒计时</h3>
+            <p class="timer" id="timer">04:00</p>
+            <div class="meter"><i id="meterBar"></i></div>
+            <p class="tip" id="urgencyTip">现在下载，优先获取补贴与现金权益</p>
+            <button class="cta-main compact" data-source="close" id="closeCta">立即下载</button>
+          </article>
+        </section>
+      </main>
+
+      <button class="sticky" data-source="sticky" id="stickyCta">
+        <span id="stickyMain">立即下载</span>
+        <small id="stickySub">限时权益正在进行</small>
+      </button>
+    </div>
+
+    <script src="../../input/v2-universal-config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

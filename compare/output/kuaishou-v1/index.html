@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>快手极速版 - 看视频领现金</title>
+    <meta name="description" content="下载快手极速版，新用户现金红包，刷视频领金币，提现快。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="lp" id="lp">
+      <div class="fx-layer" aria-hidden="true" id="fxLayer"></div>
+
+      <header class="topbar" aria-label="品牌栏">
+        <div class="brand">
+          <img id="logoImage" class="logo" alt="快手极速版" />
+          <div>
+            <p class="brand-name">快手极速版</p>
+            <p class="brand-sub">看视频 · 赚现金</p>
+          </div>
+        </div>
+        <div class="timer-box" aria-live="polite" aria-label="倒计时">
+          <i class="timer-icon">🪙</i>
+          <span class="timer-segment" id="timerMin">14</span>
+          <span class="timer-colon">:</span>
+          <span class="timer-segment" id="timerSec">38</span>
+        </div>
+      </header>
+
+      <div class="ticker" aria-live="polite">
+        <span class="ticker-dot"></span>
+        <span id="tickerText">杭州 郑** 29分钟前 领取了 ¥22.88</span>
+      </div>
+
+      <main>
+        <section class="hero" aria-label="红包舞台">
+          <h1 id="heroTitle">恭喜你获得现金红包</h1>
+          <p id="heroSub" class="hero-sub">新用户专享福利 · 限时领取</p>
+
+          <article class="amount-panel" aria-label="红包金额">
+            <i class="panel-badge">🧧</i>
+            <p class="amount-label">您的红包金额</p>
+            <p class="amount-value"><em>¥</em><strong id="amountValue">38.88</strong></p>
+            <p class="amount-proof"><span class="online-dot"></span>已有 <b id="claimCount">328,691</b> 人领取</p>
+          </article>
+
+          <figure class="stage" id="stageWrap" aria-label="金币舞台">
+            <div class="stage-rays" aria-hidden="true"></div>
+            <div class="stage-coins" id="stageCoins" aria-hidden="true"></div>
+            <figcaption class="sr-only">金币主视觉</figcaption>
+          </figure>
+
+          <section class="benefit-grid" aria-label="核心利益点">
+            <article class="benefit-card" data-card="0">
+              <p class="benefit-icon">💰</p>
+              <p class="benefit-title">新人红包</p>
+              <p class="benefit-main">¥38</p>
+              <p class="benefit-sub">最高领38元</p>
+            </article>
+            <article class="benefit-card" data-card="1">
+              <p class="benefit-icon">📺</p>
+              <p class="benefit-title">看视频赚钱</p>
+              <p class="benefit-main">日赚50+</p>
+              <p class="benefit-sub">刷视频有金币</p>
+            </article>
+            <article class="benefit-card" data-card="2">
+              <p class="benefit-icon">⚡</p>
+              <p class="benefit-title">秒速提现</p>
+              <p class="benefit-main">秒到账</p>
+              <p class="benefit-sub">0.3元可提</p>
+            </article>
+            <article class="benefit-card" data-card="3">
+              <p class="benefit-icon">🎯</p>
+              <p class="benefit-title">签到奖励</p>
+              <p class="benefit-main">10倍</p>
+              <p class="benefit-sub">天天福利加码</p>
+            </article>
+          </section>
+        </section>
+
+        <section class="live" aria-label="实时提现动态">
+          <h2><span class="title-mark"></span>实时提现动态</h2>
+          <ul id="proofList"></ul>
+        </section>
+
+        <section class="steps" aria-label="领钱步骤">
+          <h3>三步领钱 超简单</h3>
+          <ol>
+            <li>
+              <span class="step-icon">📲</span>
+              <span class="step-label">下载APP</span>
+            </li>
+            <li>
+              <span class="step-icon">👆</span>
+              <span class="step-label">注册登录</span>
+            </li>
+            <li>
+              <span class="step-icon">💸</span>
+              <span class="step-label">领钱提现</span>
+            </li>
+          </ol>
+          <div class="trust-row" aria-label="信任标识">
+            <span>🔒 官方正版</span>
+            <span>✅ 安全认证</span>
+            <span>⚡ 秒速提现</span>
+            <span>🏆 3亿用户</span>
+          </div>
+        </section>
+      </main>
+
+      <button class="download-btn cta-level-1" id="downloadBtn" data-source="main">
+        <span class="btn-main">🎁 立即下载 领现金红包</span>
+        <small class="btn-sub">安装即得新人专属红包 · 0元提现秒到账</small>
+      </button>
+      <p class="legal">下载即同意《用户协议》和《隐私政策》</p>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

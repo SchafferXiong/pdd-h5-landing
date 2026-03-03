@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>千问 · 10分钟交付工作任务</title>
+    <meta name="description" content="千问AI办公助手：4秒看懂收益，参与一次秒演示，立即下载提速工作任务。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page" id="pageRoot">
+      <header class="topbar">
+        <div class="brand">
+          <img id="brandLogo" class="logo" alt="千问" />
+          <div>
+            <p class="name">千问</p>
+            <p class="sub">阿里AI助手</p>
+          </div>
+        </div>
+        <div class="proof">AI办公助手</div>
+      </header>
+
+      <main>
+        <section class="hero" aria-label="4秒转化剧情" id="heroSection">
+          <p class="tag">Qwen大模型 · AI办公助手</p>
+          <h1>10分钟交付工作任务</h1>
+          <p class="subline" id="storySubline">你说需求，千问接管执行</p>
+
+          <div class="flow-lane" id="flowLane" aria-live="polite">
+            <div class="flow-steps">
+              <span class="flow-step is-active" data-phase="narrative">看到收益</span>
+              <span class="flow-step" data-phase="participate">点击参与</span>
+              <span class="flow-step" data-phase="demo">秒级演示</span>
+              <span class="flow-step" data-phase="download">立即下载</span>
+            </div>
+            <div class="flow-track">
+              <span id="flowFill"></span>
+            </div>
+          </div>
+
+          <div class="scene-tabs" id="sceneTabs">
+            <button class="tab is-active" data-scene="0">周报</button>
+            <button class="tab" data-scene="1">PPT</button>
+            <button class="tab" data-scene="2">调研</button>
+          </div>
+
+          <article class="console" id="consoleBoard">
+            <img id="officeBackdrop" class="console-bg" alt="AI办公助手" />
+            <div class="console-mask"></div>
+
+            <div class="metrics">
+              <div class="metric">
+                <p>传统耗时</p>
+                <strong id="beforeMin">64</strong>
+                <small>分钟</small>
+              </div>
+              <div class="metric metric-highlight">
+                <p>千问交付</p>
+                <strong id="afterMin">10</strong>
+                <small>分钟</small>
+              </div>
+              <div class="metric">
+                <p>节省时间</p>
+                <strong id="savedMin">54</strong>
+                <small>分钟</small>
+              </div>
+            </div>
+
+            <div class="progress-box">
+              <p id="statusText">任务待接管</p>
+              <div class="progress-track">
+                <span id="progressFill"></span>
+              </div>
+            </div>
+
+            <ul class="task-list" id="taskList"></ul>
+
+            <button class="handover" id="handoverBtn">点我参与 · 秒演示</button>
+          </article>
+
+          <button class="cta gated-download level-1 is-locked" id="heroCta" data-source="hero">
+            <span class="cta-main">立即下载 千问</span>
+            <small class="cta-sub">下一份任务，10分钟交付</small>
+          </button>
+          <p class="cta-wait" id="ctaWait">完成演示后自动解锁下载</p>
+        </section>
+
+        <section class="story" aria-label="能力补充">
+          <h2>继续提速</h2>
+          <div class="story-grid">
+            <article>
+              <p class="kicker">结构化输出</p>
+              <p>任务结论和可交付文本一次成型。</p>
+            </article>
+            <article>
+              <p class="kicker">连续编辑</p>
+              <p>在同一会话持续修改，不反复返工。</p>
+            </article>
+            <article>
+              <p class="kicker">办公闭环</p>
+              <p>从需求到文档/PPT交付一条链路完成。</p>
+            </article>
+          </div>
+
+          <button class="cta gated-download level-1 is-locked" id="midCta" data-source="mid">
+            <span class="cta-main">下载千问</span>
+            <small class="cta-sub">直接进入AI办公模式</small>
+          </button>
+        </section>
+      </main>
+
+      <button class="sticky-cta gated-download level-1 is-locked" id="stickyCta" data-source="sticky">
+        <span class="cta-main">立即下载 千问</span>
+        <small class="cta-sub">10分钟交付工作任务</small>
+      </button>
+      <p class="legal" id="legalText">下载即同意《用户协议》和《隐私政策》</p>
+    </div>
+
+    <script src="../../input/landing-config-qianwen-v2-1.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

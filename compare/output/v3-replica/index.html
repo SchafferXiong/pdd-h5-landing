@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>拼多多 H5 V3 · Replica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#mainContent">跳到主要内容</a>
+
+    <div class="lp-page" id="lpPage" data-cta-intensity="1">
+      <header class="topbar" aria-label="品牌导航">
+        <div class="brand-wrap">
+          <img id="brandLogo" class="brand-logo" alt="拼多多 logo" />
+          <div>
+            <p class="brand-name" id="brandName">拼多多</p>
+            <p class="brand-slogan" id="brandSlogan">多实惠 多乐趣</p>
+          </div>
+        </div>
+        <button class="mini-cta" data-source="topbar" id="topbarCta">极速下载</button>
+      </header>
+
+      <main id="mainContent">
+        <section class="hero-screen" aria-label="首屏转化">
+          <div class="hero-stage" id="heroStage">
+            <div class="stage-bg" aria-hidden="true"></div>
+            <div class="stage-streak" aria-hidden="true"></div>
+
+            <div class="stage-media" aria-hidden="true">
+              <img id="heroImageA" class="stage-image stage-image-a" alt="" />
+              <img id="heroImageB" class="stage-image stage-image-b" alt="" />
+              <div class="stage-vignette"></div>
+            </div>
+
+            <div class="coin-rain" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="hero-content">
+              <div class="pill-row" id="heroPills" role="list"></div>
+
+              <article class="reward-panel" id="rewardPanel">
+                <p class="reward-kicker">限时新人专享</p>
+                <p class="reward-value">¥<strong id="rewardAmount">188.88</strong></p>
+                <p class="reward-sub">下载后可领，可微信提现到账</p>
+              </article>
+
+              <div class="hero-copy">
+                <h1 id="heroTitle" class="clamp-2">省多多小金库</h1>
+                <p id="heroSub" class="clamp-2">多实惠 多乐趣</p>
+              </div>
+
+              <div class="widget-row" id="heroWidgets" aria-label="核心权益"></div>
+
+              <button class="cta-main" id="heroCta" data-source="hero">立即下载拼多多</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="benefit-screen" id="benefitSection" aria-label="利益点展示">
+          <header class="section-head">
+            <h2>热门福利一屏看全</h2>
+            <p id="storyHeadline" class="clamp-2">百亿补贴 · 天天领现金 · 万人团</p>
+          </header>
+
+          <div class="benefit-scene" id="benefitScene">
+            <img id="storyImageA" class="story-image story-image-a" alt="" />
+            <img id="storyImageB" class="story-image story-image-b" alt="" />
+            <img id="storySticker" class="story-sticker" alt="" />
+            <div class="story-chip" id="storyChip">百亿补贴 · 官方直补 省上加省</div>
+          </div>
+
+          <div class="benefit-list" id="benefitList" role="list"></div>
+
+          <button class="cta-sub" data-source="benefit" id="benefitCta">继续下载解锁福利</button>
+        </section>
+
+        <section class="urgency-screen" aria-label="紧迫收口">
+          <article class="urgency-card">
+            <p class="urgency-kicker">限时权益进行中</p>
+            <h3>倒计时</h3>
+            <p class="countdown" id="countdown">04:00</p>
+            <div class="progress-track" role="progressbar" aria-label="领取进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <i id="progressBar"></i>
+            </div>
+            <p class="progress-copy"><span id="progressPct">0</span>% 名额已领取</p>
+
+            <ul class="live-feed" id="liveFeed" aria-label="实时领取动态"></ul>
+
+            <button class="cta-main compact" data-source="urgency" id="urgencyCta">立即下载拼多多</button>
+          </article>
+        </section>
+      </main>
+
+      <button class="sticky-cta" data-source="sticky" id="stickyCta">
+        <span id="stickyMain">立即下载拼多多</span>
+        <small id="stickySub">百亿补贴 · 天天领现金</small>
+      </button>
+
+      <div class="reward-overlay" id="rewardOverlay" data-state="hidden" aria-hidden="true">
+        <div class="overlay-card" role="dialog" aria-modal="false" aria-label="奖励弹层">
+          <button class="overlay-close" id="overlayClose" aria-label="关闭弹层">×</button>
+          <p class="overlay-kicker">恭喜你获得</p>
+          <h4>新用户专享现金红包</h4>
+          <p class="overlay-amount">¥<strong id="overlayAmount">188.88</strong></p>
+          <p class="overlay-sub">限时可领，下载后立即解锁</p>
+          <button class="cta-main overlay-btn" data-source="overlay" id="overlayCta">立即下载领取</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../input/landing-config-v3.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>H5 落地页输出入口</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: linear-gradient(180deg, #2b0703, #140201);
+        color: #fff5ec;
+      }
+      .wrap {
+        max-width: 560px;
+        margin: 0 auto;
+        padding: 24px 16px 40px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      p {
+        color: #ffd9b7;
+      }
+      .list {
+        display: grid;
+        gap: 10px;
+        margin-top: 16px;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: #fff9ef;
+        border: 1px solid rgba(255, 237, 214, 0.25);
+        border-radius: 12px;
+        padding: 14px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      a:hover {
+        background: rgba(255, 255, 255, 0.16);
+      }
+      code {
+        color: #ffe5c4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>H5 落地页输出入口</h1>
+      <p>包含多版本实验页与定制 App 落地页。</p>
+      <div class="list">
+        <a href="./qianwen-v2-3-office-cinematic/index.html">千问 v2.3（场景叙事 + 激进交互）</a>
+        <a href="./qianwen-v2-1-office10min/index.html">千问 v2.1（AI办公助手：10分钟交付）</a>
+        <a href="./qianwen-v1/index.html">千问 v1（方法论新版落地）</a>
+        <a href="./kuaishou-v1/index.html">快手极速版 v1（通用框架落地）</a>
+        <a href="./v3-replica/index.html">V3 Replica（Manus 主线复刻稳定版）</a>
+        <a href="./frontend-designer/index.html">frontend-designer 版本</a>
+        <a href="./ui-designer/index.html">ui-designer 版本</a>
+        <a href="./ux-designer/index.html">ux-designer 版本</a>
+        <a href="./frontend-design-masterclass/index.html">frontend-design-masterclass 版本</a>
+        <a href="./v2-hybrid/index.html">V2 Hybrid（frontend-design + ux-designer）</a>
+      </div>
+      <p>统一配置：<code>../input/landing-config.json</code></p>
+      <p>评分报告：<code>../report/scorecard.md</code>、<code>../report/recommendation.md</code>、<code>../report/v2-hybrid.md</code></p>
+    </div>
+  </body>
+</html>

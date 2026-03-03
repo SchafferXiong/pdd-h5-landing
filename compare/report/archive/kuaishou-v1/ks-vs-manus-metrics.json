@@ -1,0 +1,94 @@
+{
+  "generatedAt": "2026-03-03T06:34:09.076Z",
+  "ours": {
+    "label": "ours",
+    "title": "快手极速版 H5 · V1",
+    "url": "http://127.0.0.1:4191/compare/output/kuaishou-v1/index.html?src=compare&campaign=ksvsmanus",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "headline": "邀好友 领现金",
+    "ctaCountInView": 4,
+    "minCtaHeight": 48,
+    "firstCtaTop": 22,
+    "allVisibleActions": [
+      {
+        "text": "极速下载",
+        "top": 22,
+        "h": 48,
+        "w": 80,
+        "href": "",
+        "onclick": ""
+      },
+      {
+        "text": "立即下载快手极速版",
+        "top": 615,
+        "h": 56,
+        "w": 336,
+        "href": "",
+        "onclick": ""
+      },
+      {
+        "text": "立即下载快手极速版 看视频 领金币 · 邀好友 领现金",
+        "top": 776,
+        "h": 58,
+        "w": 366,
+        "href": "",
+        "onclick": ""
+      },
+      {
+        "text": "×",
+        "top": 333,
+        "h": 25,
+        "w": 25,
+        "href": "",
+        "onclick": ""
+      },
+      {
+        "text": "立即下载快手极速版",
+        "top": 491,
+        "h": 50,
+        "w": 284,
+        "href": "",
+        "onclick": ""
+      }
+    ],
+    "ctaTexts": [
+      "极速下载",
+      "立即下载快手极速版",
+      "立即下载快手极速版 看视频 领金币 · 邀好友 领现金",
+      "立即下载快手极速版"
+    ],
+    "pageHeight": 2103,
+    "resourceEntryCount": 10
+  },
+  "manus": {
+    "label": "manus",
+    "title": "快手极速版 - 看视频领现金",
+    "url": "https://kuaishouldg-o9958yju.manus.space/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "headline": "恭喜你获得现金红包",
+    "ctaCountInView": 1,
+    "minCtaHeight": 81,
+    "firstCtaTop": 727,
+    "allVisibleActions": [
+      {
+        "text": "🎁立即下载 领现金红包安装即得新人专属红包 · 0元提现秒到账",
+        "top": 727,
+        "h": 81,
+        "w": 350,
+        "href": "",
+        "onclick": ""
+      }
+    ],
+    "ctaTexts": [
+      "🎁立即下载 领现金红包安装即得新人专属红包 · 0元提现秒到账"
+    ],
+    "pageHeight": 1092,
+    "resourceEntryCount": 16
+  }
+}
