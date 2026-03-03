@@ -6,19 +6,16 @@
       logoUrl: './assets/img/logo/pdd-logo.png'
     },
     media: {
-      heroMain4s: './assets/video/hero-main-4s.mp4',
-      benefit8s: './assets/video/benefit-8s.mp4',
-      posters: {
-        hero: './assets/video/hero-poster.jpg',
-        benefit: './assets/video/benefit-poster.jpg'
+      generated: {
+        hero: './assets/img/generated/hero-conversion-kv.svg',
+        benefit: './assets/img/generated/benefit-promo-atlas.svg'
       }
     },
     timing: {
       heroBeats: [
-        { start: 0.0, end: 0.8, title: '省多多小金库', sub: '品牌记忆点直达' },
-        { start: 0.8, end: 2.0, title: '百亿补贴·官方直补', sub: '全网低价 + 单单返现折上折' },
-        { start: 2.0, end: 3.2, title: '天天领现金', sub: '微信打款 秒到账' },
-        { start: 3.2, end: 4.0, title: '立即下载', sub: '抢限时福利窗口' }
+        { start: 0.0, end: 1.2, title: '百亿补贴', sub: '官方直补，买贵必赔' },
+        { start: 1.2, end: 2.6, title: '天天领现金', sub: '微信到账，速度可见' },
+        { start: 2.6, end: 4.0, title: '万人团', sub: '一件也是批发价' }
       ],
       benefitBeats: [
         { start: 0.0, end: 2.0, title: '万人团', sub: '一件也是批发价' },
@@ -67,26 +64,53 @@
   };
 
   const app = document.getElementById('app');
-  const heroVideo = document.getElementById('heroVideo');
-  const benefitVideo = document.getElementById('benefitVideo');
+  const heroArt = document.getElementById('heroArt');
+  const benefitVisual = document.getElementById('benefitVisual');
   const heroChips = document.getElementById('heroChips');
   const heroBeatTitle = document.getElementById('heroBeatTitle');
   const heroBeatSub = document.getElementById('heroBeatSub');
+  const heroTrustRail = document.getElementById('heroTrustRail');
   const benefitBeatTitle = document.getElementById('benefitBeatTitle');
   const benefitBeatSub = document.getElementById('benefitBeatSub');
   const benefitCards = document.getElementById('benefitCards');
   const valueCanvas = document.getElementById('valueCanvas');
   const benefitMarquee = document.getElementById('benefitMarquee');
+  const subsidyPool = document.getElementById('subsidyPool');
+  const cashBeat = document.getElementById('cashBeat');
+  const groupHeat = document.getElementById('groupHeat');
   const countdown = document.getElementById('countdown');
 
   const state = {
     heroBeat: -1,
     benefitBeat: -1,
     ctaIntensity: 1,
-    config: null
+    config: null,
+    statTimer: null
   };
 
-  const safeDuration = (video) => Number.isFinite(video.duration) && video.duration > 0 ? video.duration : 0;
+  window.setCtaIntensity = function setCtaIntensity(level) {
+    if (state.ctaIntensity === level) return;
+    state.ctaIntensity = level;
+    app.dataset.ctaIntensity = String(level);
+  };
+
+  function findBeatIndex(t, beats) {
+    for (let i = 0; i < beats.length; i += 1) {
+      if (t >= beats[i].start && t < beats[i].end) return i;
+    }
+    return beats.length - 1;
+  }
+
+  function setSceneFocus(index) {
+    if (!valueCanvas) return;
+    const cards = [...valueCanvas.children];
+    if (!cards.length) return;
+    const safeIndex = Math.max(0, index % cards.length);
+
+    cards.forEach((card, i) => {
+      card.classList.toggle('active', i === safeIndex);
+    });
+  }
 
   window.setHeroBeat = function setHeroBeat(index) {
     if (state.heroBeat === index || !state.config) return;
@@ -101,6 +125,8 @@
     [...heroChips.children].forEach((chip, i) => {
       chip.classList.toggle('active', i === index);
     });
+
+    window.setCtaIntensity(index === state.config.timing.heroBeats.length - 1 ? 2 : 1);
   };
 
   window.setBenefitBeat = function setBenefitBeat(index) {
@@ -120,67 +146,41 @@
     setSceneFocus(index);
   };
 
-  window.setCtaIntensity = function setCtaIntensity(level) {
-    if (state.ctaIntensity === level) return;
-    state.ctaIntensity = level;
-    app.dataset.ctaIntensity = String(level);
-  };
+  function startBeatLoop(beats, setter) {
+    if (!Array.isArray(beats) || beats.length === 0) return;
+    const totalSec = beats[beats.length - 1].end;
+    const startedAt = Date.now();
 
-  function findBeatIndex(t, beats) {
-    for (let i = 0; i < beats.length; i += 1) {
-      if (t >= beats[i].start && t < beats[i].end) return i;
-    }
-    return beats.length - 1;
+    window.setInterval(() => {
+      const t = ((Date.now() - startedAt) / 1000) % totalSec;
+      setter(findBeatIndex(t, beats));
+    }, 180);
   }
 
-  function syncHeroFrame(time) {
-    const beats = state.config.timing.heroBeats;
-    const idx = findBeatIndex(time, beats);
-    window.setHeroBeat(idx);
-
-    if (idx === beats.length - 1) {
-      window.setCtaIntensity(2);
-    } else if (idx >= 1) {
-      window.setCtaIntensity(1);
-    } else {
-      window.setCtaIntensity(0);
-    }
+  function formatWan(numberInWan) {
+    return `¥${Math.round(numberInWan).toLocaleString('zh-CN')}万`;
   }
 
-  function syncBenefitFrame(time) {
-    const beats = state.config.timing.benefitBeats;
-    const idx = findBeatIndex(time, beats);
-    window.setBenefitBeat(idx);
-  }
+  function startStatTicker() {
+    const tick = () => {
+      if (subsidyPool) {
+        const amount = 1260 + Math.random() * 120;
+        subsidyPool.textContent = formatWan(amount);
+      }
 
-  function onHeroTick() {
-    const duration = safeDuration(heroVideo) || 4;
-    const t = heroVideo.currentTime % duration;
-    syncHeroFrame(t);
+      if (cashBeat) {
+        const sec = (1.8 + Math.random() * 0.5).toFixed(1);
+        cashBeat.textContent = `${sec}s`;
+      }
 
-    if ('requestVideoFrameCallback' in heroVideo) {
-      heroVideo.requestVideoFrameCallback(onHeroTick);
-    }
-  }
+      if (groupHeat) {
+        const heat = (9.6 + Math.random() * 0.3).toFixed(1);
+        groupHeat.textContent = heat;
+      }
+    };
 
-  function onBenefitTick() {
-    const duration = safeDuration(benefitVideo) || 8;
-    const t = benefitVideo.currentTime % duration;
-    syncBenefitFrame(t);
-
-    if ('requestVideoFrameCallback' in benefitVideo) {
-      benefitVideo.requestVideoFrameCallback(onBenefitTick);
-    }
-  }
-
-  function startVideoSync(video, tick) {
-    if ('requestVideoFrameCallback' in video) {
-      video.requestVideoFrameCallback(tick);
-    } else {
-      video.addEventListener('timeupdate', () => {
-        tick();
-      });
-    }
+    tick();
+    state.statTimer = window.setInterval(tick, 2200);
   }
 
   function appendQueryParams(baseUrl, source) {
@@ -212,6 +212,11 @@
     });
   }
 
+  function getScenes(config) {
+    if (Array.isArray(config.generatedScenes) && config.generatedScenes.length) return config.generatedScenes;
+    return fallbackConfig.generatedScenes;
+  }
+
   function renderHeroChips(beats) {
     heroChips.innerHTML = beats
       .map((beat, idx) => `<span class="beat-chip ${idx === 0 ? 'active' : ''}">${beat.title}</span>`)
@@ -231,25 +236,18 @@
       .join('');
   }
 
-  function getScenes(config) {
-    if (Array.isArray(config.generatedScenes) && config.generatedScenes.length) return config.generatedScenes;
-    return fallbackConfig.generatedScenes;
-  }
+  function renderHeroTrustRail(config) {
+    if (!heroTrustRail) return;
+    const source = Array.isArray(config.benefits) ? config.benefits : fallbackConfig.benefits;
+    const tokens = [...new Set(source.flatMap((item) => item.split('/').map((s) => s.trim()).filter(Boolean)))].slice(0, 6);
 
-  function setSceneFocus(index) {
-    if (!valueCanvas) return;
-    const cards = [...valueCanvas.children];
-    if (!cards.length) return;
-    const safeIndex = Math.max(0, index % cards.length);
-
-    cards.forEach((card, i) => {
-      card.classList.toggle('active', i === safeIndex);
-    });
+    heroTrustRail.innerHTML = tokens.map((item) => `<span class="trust-tag">${item}</span>`).join('');
   }
 
   function renderValueCanvas(config) {
     if (!valueCanvas) return;
     const scenes = getScenes(config);
+
     valueCanvas.innerHTML = scenes
       .map((scene, idx) => {
         const meter = Math.max(20, Math.min(100, Number(scene.meter) || 75));
@@ -259,7 +257,7 @@
               <img class="scene-image" src="${scene.image}" alt="${scene.title}" loading="lazy" />
             </figure>
             <div class="scene-meta">
-              <div class="scene-kicker">AI 视觉图层</div>
+              <div class="scene-kicker">AI 场景图</div>
               <h3>${scene.title}</h3>
               <p>${scene.caption}</p>
               <div class="scene-widget">
@@ -276,6 +274,7 @@
 
   function renderBenefitMarquee(config) {
     if (!benefitMarquee) return;
+
     const source = Array.isArray(config.benefits) ? config.benefits : fallbackConfig.benefits;
     const tags = [...new Set(source.flatMap((item) => item.split('/').map((s) => s.trim()).filter(Boolean)))];
 
@@ -300,34 +299,9 @@
       countdown.textContent = `${min}:${sec}`;
       remain = remain > 0 ? remain - 1 : totalSec;
     };
+
     tick();
     window.setInterval(tick, 1000);
-  }
-
-  function tryAutoplay(video, fallbackClassHost) {
-    const playResult = video.play();
-    if (playResult && typeof playResult.then === 'function') {
-      playResult.catch(() => {
-        fallbackClassHost.classList.add('video-fallback');
-      });
-    }
-  }
-
-  function watchBenefitSection() {
-    const section = document.getElementById('benefitSection');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            benefitVideo.play().catch(() => {
-              document.getElementById('benefitVideoShell').classList.add('video-fallback');
-            });
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-    observer.observe(section);
   }
 
   async function loadConfig() {
@@ -348,13 +322,11 @@
     const logo = document.getElementById('brandLogo');
     logo.src = config.brand.logoUrl;
 
-    heroVideo.poster = config.media.posters.hero;
-    heroVideo.querySelector('source').src = config.media.heroMain4s;
-    heroVideo.load();
+    const heroImage = config.media?.generated?.hero || fallbackConfig.media.generated.hero;
+    const benefitImage = config.media?.generated?.benefit || fallbackConfig.media.generated.benefit;
 
-    benefitVideo.poster = config.media.posters.benefit;
-    benefitVideo.querySelector('source').src = config.media.benefit8s;
-    benefitVideo.load();
+    if (heroArt) heroArt.src = heroImage;
+    if (benefitVisual) benefitVisual.src = benefitImage;
 
     document.querySelectorAll('.cta-main, .cta-strong').forEach((btn) => {
       btn.textContent = config.cta.buttonText;
@@ -362,6 +334,7 @@
 
     renderHeroChips(config.timing.heroBeats);
     renderBenefitCards(config.timing.benefitBeats);
+    renderHeroTrustRail(config);
     renderValueCanvas(config);
     renderBenefitMarquee(config);
   }
@@ -379,11 +352,9 @@
     window.setBenefitBeat(0);
     window.setCtaIntensity(1);
 
-    startVideoSync(heroVideo, onHeroTick);
-    startVideoSync(benefitVideo, onBenefitTick);
-
-    tryAutoplay(heroVideo, document.getElementById('stageShell'));
-    watchBenefitSection();
+    startBeatLoop(config.timing.heroBeats, window.setHeroBeat);
+    startBeatLoop(config.timing.benefitBeats, window.setBenefitBeat);
+    startStatTicker();
   }
 
   init();

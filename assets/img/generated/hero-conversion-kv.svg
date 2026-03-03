@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1280" role="img" aria-label="Pinduoduo hero conversion visual">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#390600" />
+      <stop offset="0.46" stop-color="#c21909" />
+      <stop offset="1" stop-color="#ff7d25" />
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.2" r="0.62">
+      <stop offset="0" stop-color="#fff2b6" stop-opacity="0.95" />
+      <stop offset="1" stop-color="#fff2b6" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffe394" />
+      <stop offset="1" stop-color="#ff8f2f" />
+    </linearGradient>
+    <linearGradient id="line" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ffd86e" />
+      <stop offset="1" stop-color="#ff4f25" />
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="1280" fill="url(#bg)" />
+  <circle cx="360" cy="220" r="280" fill="url(#halo)" />
+
+  <g opacity="0.2" stroke="#ffeac0" stroke-width="2">
+    <circle cx="360" cy="740" r="280" />
+    <circle cx="360" cy="740" r="200" />
+    <circle cx="360" cy="740" r="124" />
+  </g>
+
+  <g transform="translate(86 250)">
+    <rect x="0" y="0" width="548" height="360" rx="40" fill="#2e0400" fill-opacity="0.36" stroke="#ffe6af" stroke-opacity="0.45" />
+    <text x="44" y="118" font-family="'Noto Sans SC', sans-serif" font-size="56" font-weight="700" fill="#fff4d2">百亿补贴</text>
+    <text x="44" y="188" font-family="'Noto Sans SC', sans-serif" font-size="36" fill="#ffe2b8">官方直补 · 买贵必赔</text>
+    <g transform="translate(44 236)">
+      <rect x="0" y="0" width="460" height="52" rx="26" fill="#fff1d3" fill-opacity="0.26" />
+      <rect x="0" y="0" width="414" height="52" rx="26" fill="url(#card)" />
+      <text x="24" y="34" font-family="'Noto Sans SC', sans-serif" font-size="26" font-weight="700" fill="#541500">最高补贴 90%</text>
+    </g>
+  </g>
+
+  <g fill="#ffe9bf" opacity="0.95">
+    <rect x="78" y="736" width="170" height="76" rx="18" />
+    <rect x="276" y="690" width="170" height="76" rx="18" />
+    <rect x="474" y="736" width="170" height="76" rx="18" />
+  </g>
+
+  <g font-family="'Noto Sans SC', sans-serif" font-size="26" font-weight="700" fill="#742100">
+    <text x="130" y="785">¥66券</text>
+    <text x="330" y="739">2s到账</text>
+    <text x="528" y="785">万人团</text>
+  </g>
+
+  <path d="M72 916 C170 840 274 906 360 844 C444 784 532 828 648 764" stroke="url(#line)" stroke-width="18" stroke-linecap="round" fill="none" opacity="0.88" />
+  <path d="M72 996 C188 914 276 972 360 924 C444 876 540 910 650 854" stroke="#ffd76c" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.78" />
+
+  <g fill="#ffecc6" opacity="0.92">
+    <circle cx="110" cy="1040" r="11" />
+    <circle cx="202" cy="1080" r="10" />
+    <circle cx="300" cy="1038" r="12" />
+    <circle cx="412" cy="1086" r="10" />
+    <circle cx="516" cy="1046" r="11" />
+    <circle cx="612" cy="1084" r="9" />
+  </g>
+</svg>

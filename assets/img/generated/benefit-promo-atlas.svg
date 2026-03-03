@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 660" role="img" aria-label="Pinduoduo benefit atlas visual">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#3a0700" />
+      <stop offset="0.5" stop-color="#be1b0b" />
+      <stop offset="1" stop-color="#ff7d26" />
+    </linearGradient>
+    <radialGradient id="halo" cx="0.75" cy="0.15" r="0.64">
+      <stop offset="0" stop-color="#fff2b2" stop-opacity="0.92" />
+      <stop offset="1" stop-color="#fff2b2" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="tile" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffe495" />
+      <stop offset="1" stop-color="#ff9a33" />
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="660" fill="url(#bg)" />
+  <circle cx="746" cy="110" r="240" fill="url(#halo)" />
+
+  <g transform="translate(78 80)">
+    <rect x="0" y="0" width="804" height="500" rx="36" fill="#2a0400" fill-opacity="0.3" stroke="#ffe8b5" stroke-opacity="0.4" />
+
+    <g transform="translate(34 38)">
+      <text x="0" y="52" font-family="'Noto Sans SC', sans-serif" font-size="54" font-weight="700" fill="#fff4cf">权益全开</text>
+      <text x="0" y="102" font-family="'Noto Sans SC', sans-serif" font-size="30" fill="#ffe3bd">百亿补贴 · 天天返现 · 万人团</text>
+    </g>
+
+    <g transform="translate(34 150)">
+      <rect x="0" y="0" width="228" height="130" rx="22" fill="url(#tile)" />
+      <rect x="264" y="0" width="228" height="130" rx="22" fill="url(#tile)" />
+      <rect x="528" y="0" width="228" height="130" rx="22" fill="url(#tile)" />
+
+      <text x="24" y="56" font-family="'Noto Sans SC', sans-serif" font-size="34" font-weight="700" fill="#5f1a00">百亿补贴</text>
+      <text x="24" y="96" font-family="'Noto Sans SC', sans-serif" font-size="24" fill="#7f2b00">全网低价</text>
+
+      <text x="288" y="56" font-family="'Noto Sans SC', sans-serif" font-size="34" font-weight="700" fill="#5f1a00">天天返现</text>
+      <text x="288" y="96" font-family="'Noto Sans SC', sans-serif" font-size="24" fill="#7f2b00">微信到账</text>
+
+      <text x="552" y="56" font-family="'Noto Sans SC', sans-serif" font-size="34" font-weight="700" fill="#5f1a00">万人团</text>
+      <text x="552" y="96" font-family="'Noto Sans SC', sans-serif" font-size="24" fill="#7f2b00">一件批发价</text>
+    </g>
+
+    <g transform="translate(34 316)">
+      <rect x="0" y="0" width="756" height="56" rx="28" fill="#fff1d3" fill-opacity="0.22" />
+      <rect x="0" y="0" width="672" height="56" rx="28" fill="url(#tile)" />
+      <text x="24" y="37" font-family="'Noto Sans SC', sans-serif" font-size="30" font-weight="700" fill="#5c1800">新客首单补贴力度 89%</text>
+    </g>
+
+    <g transform="translate(34 398)" fill="#ffeac3" opacity="0.95">
+      <rect x="0" y="0" width="184" height="54" rx="14" />
+      <rect x="200" y="0" width="184" height="54" rx="14" />
+      <rect x="400" y="0" width="184" height="54" rx="14" />
+      <rect x="600" y="0" width="156" height="54" rx="14" />
+    </g>
+
+    <g transform="translate(34 398)" font-family="'Noto Sans SC', sans-serif" font-size="24" font-weight="700" fill="#6b2000">
+      <text x="44" y="35">买菜更省</text>
+      <text x="248" y="35">商家0佣金</text>
+      <text x="452" y="35">限时秒杀</text>
+      <text x="634" y="35">官方直补</text>
+    </g>
+  </g>
+</svg>

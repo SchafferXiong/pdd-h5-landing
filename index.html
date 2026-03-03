@@ -31,30 +31,41 @@
           <div class="stage-blob blob-b"></div>
 
           <div class="stage-shell" id="stageShell">
-            <video
-              id="heroVideo"
-              class="stage-video"
-              muted
-              playsinline
-              webkit-playsinline
-              preload="auto"
-              autoplay
-              loop
-              poster="./assets/video/hero-poster.jpg"
-            >
-              <source src="./assets/video/hero-main-4s.mp4" type="video/mp4" />
-            </video>
+            <div class="hero-art-wrap">
+              <img id="heroArt" class="hero-art" src="./assets/img/generated/hero-conversion-kv.svg" alt="拼多多优惠场景图" />
+              <div class="hero-vignette"></div>
+              <div class="hero-shine"></div>
+            </div>
 
-            <div class="video-vignette"></div>
-            <div class="video-shine"></div>
+            <div class="float-tokens">
+              <span class="float-token token-a">领¥66</span>
+              <span class="float-token token-b">万人团</span>
+              <span class="float-token token-c">0佣金</span>
+            </div>
+
+            <div class="hero-kpi-strip">
+              <article class="kpi-chip">
+                <span>今日补贴池</span>
+                <strong id="subsidyPool">¥1280万</strong>
+              </article>
+              <article class="kpi-chip">
+                <span>现金到账</span>
+                <strong id="cashBeat">2.0s</strong>
+              </article>
+              <article class="kpi-chip">
+                <span>拼团热度</span>
+                <strong id="groupHeat">9.8</strong>
+              </article>
+            </div>
 
             <div class="beat-chips" id="heroChips" aria-live="polite"></div>
 
             <div class="beat-copy">
-              <h1 id="heroBeatTitle">省多多小金库</h1>
-              <p id="heroBeatSub">品牌记忆点直达</p>
+              <h1 id="heroBeatTitle">百亿补贴</h1>
+              <p id="heroBeatSub">官方直补，买贵必赔</p>
             </div>
 
+            <div class="hero-trust-rail" id="heroTrustRail"></div>
             <button class="cta cta-main" data-source="hero">立即下载领福利</button>
             <div class="stage-ring"></div>
           </div>
@@ -68,24 +79,12 @@
 
         <section class="benefit-sync" id="benefitSection">
           <div class="section-head">
-            <h2>8秒利益强化</h2>
-            <p>滚动即触发，补齐转化理由链路</p>
+            <h2>热门权益</h2>
           </div>
 
           <div class="benefit-layout">
-            <div class="benefit-video-shell" id="benefitVideoShell">
-              <video
-                id="benefitVideo"
-                class="benefit-video"
-                muted
-                playsinline
-                webkit-playsinline
-                preload="metadata"
-                loop
-                poster="./assets/video/benefit-poster.jpg"
-              >
-                <source src="./assets/video/benefit-8s.mp4" type="video/mp4" />
-              </video>
+            <div class="benefit-visual-shell">
+              <img id="benefitVisual" class="benefit-visual" src="./assets/img/generated/benefit-promo-atlas.svg" alt="拼多多权益视觉图" />
               <div class="benefit-overlay" id="benefitOverlay">
                 <strong id="benefitBeatTitle">万人团</strong>
                 <span id="benefitBeatSub">一件也是批发价</span>
@@ -98,8 +97,7 @@
 
         <section class="value-composer" id="valueComposer">
           <div class="section-head">
-            <h2>利益点视觉组合</h2>
-            <p>利益点文案 + 动态组件 + AI 视觉图，直接强化下载决策</p>
+            <h2>权益场景</h2>
           </div>
 
           <div class="value-canvas" id="valueCanvas"></div>
