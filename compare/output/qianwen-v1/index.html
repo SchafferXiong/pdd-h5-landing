@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>千问 - 阿里AI助手</title>
+    <meta name="description" content="千问是阿里官方AI助手，体验Qwen大模型，支持AI办公、AI生图生视频、学习辅导与生活助理。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page" id="pageRoot">
+      <div class="ambient" aria-hidden="true"></div>
+
+      <header class="topbar" aria-label="品牌信息">
+        <div class="brand-block">
+          <img id="brandLogo" class="brand-logo" alt="千问" />
+          <div>
+            <p class="brand-name">千问</p>
+            <p class="brand-sub">阿里AI助手</p>
+          </div>
+        </div>
+        <div class="proof-chip" id="ratingChip">6981次评分</div>
+      </header>
+
+      <div class="ticker" aria-live="polite">
+        <span class="ticker-dot"></span>
+        <span id="tickerText">AI生活助理：一句话点外卖、订机酒、找餐厅</span>
+      </div>
+
+      <main>
+        <section class="hero" aria-label="首屏转化">
+          <p class="hero-tag">阿里官方AI助手 · Qwen大模型</p>
+          <h1>聪明会思考的 AI 助手</h1>
+          <p class="hero-sub" id="heroSub">阿里官方AI助手 · 体验最新Qwen大模型</p>
+
+          <div class="proof-row" aria-label="可信背书">
+            <span>✅ 阿里官方</span>
+            <span>⚡ AI办公提效</span>
+            <span>🎬 生图生视频</span>
+          </div>
+
+          <button class="cta cta-main level-1" data-source="hero" id="heroCta">
+            <span class="cta-title">立即下载 千问</span>
+            <small class="cta-sub">体验阿里官方AI助手 · Qwen大模型</small>
+          </button>
+
+          <div class="stage" id="stageWrap">
+            <div class="stage-glow" aria-hidden="true"></div>
+            <img id="stageImage" alt="千问应用功能截图" />
+          </div>
+
+          <ul class="beat-pills" id="beatPills" aria-label="核心能力">
+            <li class="active">AI生活助理</li>
+            <li>AI办公助手</li>
+            <li>AI生图生视频</li>
+            <li>千问小讲堂</li>
+            <li>文档创作编辑</li>
+          </ul>
+        </section>
+
+        <section class="benefit" aria-label="利益点">
+          <h2>4 秒看懂千问能做什么</h2>
+          <div class="benefit-grid" id="benefitGrid">
+            <article class="benefit-card is-focus">
+              <p class="benefit-kicker">AI生活助理</p>
+              <p class="benefit-desc">一句话点外卖、订机酒、找餐厅、办政务</p>
+            </article>
+            <article class="benefit-card">
+              <p class="benefit-kicker">AI办公助手</p>
+              <p class="benefit-desc">做应用、做报表、调研分析、数据处理</p>
+            </article>
+            <article class="benefit-card">
+              <p class="benefit-kicker">AI生图生视频</p>
+              <p class="benefit-desc">海量创意特效，AI生成同款</p>
+            </article>
+            <article class="benefit-card">
+              <p class="benefit-kicker">千问小讲堂</p>
+              <p class="benefit-desc">可视化讲解，1对1语音互动辅导</p>
+            </article>
+            <article class="benefit-card">
+              <p class="benefit-kicker">文档创作编辑</p>
+              <p class="benefit-desc">写作与PPT，智能编辑与文件总结</p>
+            </article>
+          </div>
+
+          <button class="cta cta-mid level-1" data-source="mid" id="midCta">
+            <span class="cta-title">下载千问 立刻体验</span>
+            <small class="cta-sub">AI办公、学习、生活一站搞定</small>
+          </button>
+        </section>
+
+        <section class="trust" aria-label="低阻力转化">
+          <h3>上手快，门槛低</h3>
+          <ol class="steps">
+            <li><span>1</span>下载安装千问</li>
+            <li><span>2</span>输入需求或上传文档</li>
+            <li><span>3</span>生成结果并继续优化</li>
+          </ol>
+          <p class="trust-note">支持文档阅读、AI写作、PPT生成与图片/视频创作。</p>
+        </section>
+      </main>
+
+      <button class="sticky-cta level-1" id="stickyCta" data-source="sticky">
+        <span class="cta-title">立即下载 千问</span>
+        <small class="cta-sub">阿里官方AI助手 · 聪明会思考</small>
+      </button>
+      <p class="legal" id="legalText">下载即同意《用户协议》和《隐私政策》</p>
+    </div>
+
+    <script src="../../input/landing-config-qianwen-v1.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

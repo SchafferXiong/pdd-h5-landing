@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>千问 · AI办公助手</title>
+    <meta name="description" content="千问AI办公助手：把复杂工作任务压缩到10分钟交付，立即开启高效办公。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page" id="pageRoot" data-phase="hook">
+      <header class="topbar">
+        <div class="brand">
+          <img id="brandLogo" class="logo" alt="千问" />
+          <div>
+            <p class="name">千问</p>
+            <p class="sub">阿里AI助手</p>
+          </div>
+        </div>
+        <div class="badge">AI办公助手</div>
+      </header>
+
+      <main>
+        <section class="hero" id="heroSection" aria-label="千问办公场景">
+          <div class="halo halo-a"></div>
+          <div class="halo halo-b"></div>
+
+          <p class="hero-kicker">Qwen 大模型</p>
+          <h1 id="heroTitle">你的下一份工作任务，10分钟交付</h1>
+          <p class="hero-sub" id="heroSub">从周报到PPT，再到调研，一次交给千问。</p>
+
+          <div class="scene-pills" id="sceneTabs">
+            <button class="pill is-active" data-scene="0">周报</button>
+            <button class="pill" data-scene="1">PPT</button>
+            <button class="pill" data-scene="2">调研</button>
+          </div>
+
+          <article class="stage" id="stageBoard">
+            <img id="stageImage" class="stage-image" alt="AI办公场景" />
+            <div class="stage-mask"></div>
+
+            <div class="float-chip chip-1" id="chipScene">周报模式</div>
+            <div class="float-chip chip-2">AI自动生成中</div>
+            <div class="float-chip chip-3" id="chipSaved">节省 54 分钟</div>
+
+            <div class="time-panel">
+              <div class="time-item before">
+                <p>传统耗时</p>
+                <strong id="beforeMin">64</strong>
+                <small>分钟</small>
+              </div>
+              <div class="time-item after">
+                <p>千问交付</p>
+                <strong id="afterMin">10</strong>
+                <small>分钟</small>
+              </div>
+            </div>
+
+            <p class="status" id="statusText">准备就绪，开始生成可交付结果</p>
+            <div class="progress"><span id="progressFill"></span></div>
+
+            <ul class="task-list" id="taskList"></ul>
+
+            <button class="engage" id="engageBtn">
+              <span class="engage-main">启动10分钟模式</span>
+              <small class="engage-sub" id="engageHint">点一下，马上看结果如何生成</small>
+            </button>
+          </article>
+
+          <button class="hero-cta is-locked" id="heroCta" data-source="hero">
+            <span class="cta-main">立即下载 千问</span>
+            <small class="cta-sub" id="ctaSub">完成演示后解锁下载</small>
+          </button>
+        </section>
+
+        <section class="benefits" aria-label="能力展示">
+          <h2>下载后你会立刻得到</h2>
+          <div class="benefit-grid" id="benefitGrid"></div>
+          <button class="mid-cta" id="midCta" data-source="mid">下载千问 开始高效办公</button>
+        </section>
+
+        <section class="closing" aria-label="收口引导">
+          <p class="closing-title">今天的下一份任务，不用再手动从零开始。</p>
+          <div class="signal-row">
+            <span>可交付结果</span>
+            <span>连续编辑</span>
+            <span>多场景覆盖</span>
+          </div>
+        </section>
+      </main>
+
+      <button class="sticky-cta" id="stickyCta" data-source="sticky">
+        <span class="cta-main">立即下载 千问</span>
+        <small class="cta-sub">进入10分钟办公模式</small>
+      </button>
+      <p class="legal" id="legalText">下载即同意《用户协议》和《隐私政策》</p>
+    </div>
+
+    <script src="../../input/landing-config-qianwen-v2-3.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>拼多多 H5 · Frontend Design Masterclass Variant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sarabun:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="stage" id="stage" data-cta-intensity="1">
+      <header class="masthead" aria-label="品牌导航">
+        <div class="brand">
+          <img id="brandLogo" class="brand-logo" alt="拼多多 logo" />
+          <div>
+            <p class="brand-name">拼多多</p>
+            <p class="brand-slogan" id="brandSlogan">多实惠 多乐趣</p>
+          </div>
+        </div>
+        <button class="quick-cta" data-source="topbar">极速下载</button>
+      </header>
+
+      <main>
+        <section class="hero-lab" aria-label="首屏4秒舞台">
+          <div class="kinetic-shell" id="heroShell">
+            <img id="layerBack" class="layer layer-back" alt="背景层" />
+            <img id="layerMid" class="layer layer-mid" alt="中景层" />
+            <img id="layerFront" class="layer layer-front" alt="前景层" />
+            <div class="grid-overlay" aria-hidden="true"></div>
+            <div class="scanline" aria-hidden="true"></div>
+
+            <ul class="ticker" id="heroTicker" aria-live="polite"></ul>
+
+            <div class="headline">
+              <p class="eyebrow" id="beatLabel">01 / 04</p>
+              <h1 id="heroTitle">省多多小金库</h1>
+              <p id="heroSub">多实惠 多乐趣</p>
+            </div>
+
+            <button class="cta-orbit" id="heroCta" data-source="hero-main">
+              <span id="heroBtnText">立即下载拼多多</span>
+              <i class="orbit-ring" aria-hidden="true"></i>
+            </button>
+          </div>
+        </section>
+
+        <section class="story-reel" id="storySection" aria-label="福利展示">
+          <div class="reel-head">
+            <h2>热门福利，马上解锁</h2>
+            <p>百亿补贴、天天领现金、万人团，下载就能参与</p>
+          </div>
+
+          <div class="reel-stage">
+            <img id="storyVisual" alt="福利画面" />
+            <img id="storySticker" class="sticker" alt="促销贴纸" />
+            <div class="reel-noise" aria-hidden="true"></div>
+            <div class="reel-caption">
+              <strong id="storyTitle">万人团</strong>
+              <span id="storySub">一件也是批发价</span>
+            </div>
+          </div>
+
+          <div class="reel-cards" id="storyCards" role="list"></div>
+
+          <button class="cta-flat" data-source="story">继续下载领福利</button>
+        </section>
+
+        <section class="final-burst" aria-label="收口区">
+          <article class="burst-card">
+            <p class="label">权益窗口进行中</p>
+            <h3>下载倒计时</h3>
+            <p class="clock" id="clock">04:00</p>
+            <div class="burst-meter"><i id="burstBar"></i></div>
+            <div class="signal-row">
+              <span>百亿补贴</span>
+              <span>天天领现金</span>
+              <span>万人团</span>
+            </div>
+            <button class="cta-flat" data-source="final">立即下载拼多多</button>
+          </article>
+        </section>
+      </main>
+
+      <button class="sticky-orbit" id="stickyCta" data-source="sticky">
+        <span id="stickyMain">立即下载</span>
+        <small>全网低价 · 微信秒到账</small>
+      </button>
+    </div>
+
+    <script src="../../input/landing-config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

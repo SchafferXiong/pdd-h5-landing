@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>拼多多 H5 · Frontend Designer Variant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <div class="page" id="page" data-cta-intensity="1">
+      <header class="topbar" aria-label="品牌导航">
+        <div class="brand">
+          <img id="brandLogo" alt="拼多多 logo" class="logo" />
+          <div>
+            <p class="brand-name">拼多多</p>
+            <p class="brand-slogan" id="brandSlogan">多实惠 多乐趣</p>
+          </div>
+        </div>
+        <button class="btn btn-ghost" data-source="topbar">极速下载</button>
+      </header>
+
+      <main id="main">
+        <section class="hero" aria-label="首屏福利">
+          <div class="hero-visual" id="heroVisual">
+            <img id="heroFrameA" class="frame frame-a" alt="主视觉帧" />
+            <img id="heroFrameB" class="frame frame-b" alt="主视觉过渡帧" />
+            <div class="hero-mask"></div>
+            <ul class="chips" id="heroChips" aria-live="polite"></ul>
+            <div class="hero-copy">
+              <h1 id="heroTitle">省多多小金库</h1>
+              <p id="heroSub">多实惠 多乐趣</p>
+            </div>
+            <button class="btn btn-primary hero-cta" data-source="hero-main" id="heroCta">立即下载拼多多</button>
+          </div>
+        </section>
+
+        <section class="story" id="storySection" aria-label="福利展示">
+          <div class="section-head">
+            <h2>热门福利一屏看全</h2>
+            <p>百亿补贴、天天领现金、万人团，下载马上解锁</p>
+          </div>
+
+          <div class="story-grid">
+            <div class="story-preview" id="storyPreview">
+              <img id="storyFrame" alt="福利画面" />
+              <img class="sticker" id="sticker" alt="促销贴纸" />
+              <div class="story-badge" id="storyBadge">万人团 · 一件也是批发价</div>
+            </div>
+            <div class="story-cards" id="storyCards" role="list"></div>
+          </div>
+
+          <button class="btn btn-secondary" data-source="story">继续下载领福利</button>
+        </section>
+
+        <section class="urgency" aria-label="紧迫收口屏">
+          <article class="urgency-card">
+            <p class="kicker">限时窗口</p>
+            <h3>本轮优惠倒计时</h3>
+            <p class="timer" id="timer">04:00</p>
+            <p class="hint">窗口结束前完成下载，优先解锁补贴和返现权益</p>
+            <button class="btn btn-primary" data-source="urgency">立即下载拼多多</button>
+          </article>
+        </section>
+      </main>
+
+      <button class="sticky-cta" data-source="sticky" id="stickyCta">
+        <span id="stickyMain">立即下载</span>
+        <small id="stickySub">百亿补贴 · 天天领现金</small>
+      </button>
+    </div>
+
+    <script src="../../input/landing-config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

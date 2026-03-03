@@ -1,0 +1,48 @@
+{
+  "brand": {
+    "name": "拼多多",
+    "logoUrl": "../../../assets/img/logo/pdd-logo.png",
+    "slogan": "多实惠 多乐趣",
+    "colors": {
+      "primary": "#ff1e14",
+      "secondary": "#ff7a2a",
+      "accent": "#ffd45c"
+    }
+  },
+  "visuals": {
+    "hero": "../../input/visuals/hero_kv_main.jpg",
+    "scenes": [
+      "../../input/visuals/benefit_scene_1.jpg",
+      "../../input/visuals/benefit_scene_2.jpg",
+      "../../input/visuals/benefit_scene_3.jpg"
+    ],
+    "stickers": [
+      "../../input/visuals/ui_sticker_pack.png"
+    ],
+    "bgTexture": "../../input/visuals/bg_texture_redgold.jpg"
+  },
+  "benefits": [
+    "百亿补贴 / 全网低价 / 官方直补 / 单单返现折上折",
+    "天天领现金 / 微信打款 / 秒到账",
+    "商家入驻 0佣金 / 千亿扶持",
+    "万人团 / 一件也是批发价",
+    "省多多小金库 / 多实惠 多乐趣"
+  ],
+  "timing": {
+    "heroBeats": [
+      { "start": 0.0, "end": 0.8, "title": "省多多小金库", "sub": "多实惠 多乐趣", "ctaLevel": 0, "visualKey": "hero" },
+      { "start": 0.8, "end": 2.0, "title": "百亿补贴·官方直补", "sub": "全网低价 单单返现折上折", "ctaLevel": 1, "visualKey": "scene1" },
+      { "start": 2.0, "end": 3.2, "title": "天天领现金", "sub": "微信打款 秒到账", "ctaLevel": 1, "visualKey": "scene2" },
+      { "start": 3.2, "end": 4.0, "title": "立即下载", "sub": "限时福利 现在解锁", "ctaLevel": 2, "visualKey": "scene3" }
+    ],
+    "storyBeats": [
+      { "start": 0.0, "end": 2.6, "title": "万人团", "sub": "一件也是批发价", "ctaLevel": 1, "visualKey": "scene3" },
+      { "start": 2.6, "end": 5.2, "title": "商家入驻", "sub": "0佣金 千亿扶持", "ctaLevel": 1, "visualKey": "scene1" },
+      { "start": 5.2, "end": 8.0, "title": "天天领现金", "sub": "微信打款 秒到账", "ctaLevel": 2, "visualKey": "scene2" }
+    ]
+  },
+  "cta": {
+    "text": "立即下载拼多多",
+    "androidUrl": "https://app.mi.com/details?id=com.xunmeng.pinduoduo"
+  }
+}

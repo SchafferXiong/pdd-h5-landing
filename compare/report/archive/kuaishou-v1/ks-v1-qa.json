@@ -1,0 +1,134 @@
+[
+  {
+    "size": "360x780",
+    "viewOverlay": "/tmp/ks-v1-qa/ks-v1-360x780-view-overlay.png",
+    "view": "/tmp/ks-v1-qa/ks-v1-360x780-view.png",
+    "full": "/tmp/ks-v1-qa/ks-v1-360x780-full.png",
+    "checks": {
+      "titleVsCta": false,
+      "widgetsVsCta": false,
+      "stickyOverflow": false,
+      "ctaVisibleInViewport": true,
+      "ctaHeights": [
+        {
+          "sel": "#topbarCta",
+          "h": 48
+        },
+        {
+          "sel": "#heroCta",
+          "h": 54
+        },
+        {
+          "sel": "#benefitCta",
+          "h": 50
+        },
+        {
+          "sel": "#urgencyCta",
+          "h": 54
+        },
+        {
+          "sel": "#stickyCta",
+          "h": 58
+        },
+        {
+          "sel": "#overlayCta",
+          "h": 49
+        }
+      ],
+      "allTouchOk": true,
+      "scrollHeight": 2047
+    },
+    "jump": {
+      "ok": true,
+      "url": "https://app.xiaomi.com/details?id=com.kuaishou.nebula&src=qa&campaign=ksv1&lp_source=hero"
+    }
+  },
+  {
+    "size": "390x844",
+    "viewOverlay": "/tmp/ks-v1-qa/ks-v1-390x844-view-overlay.png",
+    "view": "/tmp/ks-v1-qa/ks-v1-390x844-view.png",
+    "full": "/tmp/ks-v1-qa/ks-v1-390x844-full.png",
+    "checks": {
+      "titleVsCta": false,
+      "widgetsVsCta": false,
+      "stickyOverflow": false,
+      "ctaVisibleInViewport": true,
+      "ctaHeights": [
+        {
+          "sel": "#topbarCta",
+          "h": 48
+        },
+        {
+          "sel": "#heroCta",
+          "h": 56
+        },
+        {
+          "sel": "#benefitCta",
+          "h": 50
+        },
+        {
+          "sel": "#urgencyCta",
+          "h": 56
+        },
+        {
+          "sel": "#stickyCta",
+          "h": 58
+        },
+        {
+          "sel": "#overlayCta",
+          "h": 50
+        }
+      ],
+      "allTouchOk": true,
+      "scrollHeight": 2103
+    },
+    "jump": {
+      "ok": true,
+      "url": "https://app.xiaomi.com/details?id=com.kuaishou.nebula&src=qa&campaign=ksv1&lp_source=hero"
+    }
+  },
+  {
+    "size": "430x932",
+    "viewOverlay": "/tmp/ks-v1-qa/ks-v1-430x932-view-overlay.png",
+    "view": "/tmp/ks-v1-qa/ks-v1-430x932-view.png",
+    "full": "/tmp/ks-v1-qa/ks-v1-430x932-full.png",
+    "checks": {
+      "titleVsCta": false,
+      "widgetsVsCta": false,
+      "stickyOverflow": false,
+      "ctaVisibleInViewport": true,
+      "ctaHeights": [
+        {
+          "sel": "#topbarCta",
+          "h": 48
+        },
+        {
+          "sel": "#heroCta",
+          "h": 56
+        },
+        {
+          "sel": "#benefitCta",
+          "h": 50
+        },
+        {
+          "sel": "#urgencyCta",
+          "h": 56
+        },
+        {
+          "sel": "#stickyCta",
+          "h": 58
+        },
+        {
+          "sel": "#overlayCta",
+          "h": 50
+        }
+      ],
+      "allTouchOk": true,
+      "scrollHeight": 2172
+    },
+    "jump": {
+      "ok": true,
+      "url": "https://app.xiaomi.com/details?id=com.kuaishou.nebula&src=qa&campaign=ksv1&lp_source=hero"
+    }
+  }
+]
