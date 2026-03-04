@@ -1,0 +1,17 @@
+{
+  "loadingTimelineMs": {
+    "closedVisible": [0, 1000],
+    "transition": [1000, 1600],
+    "openHold": [1600, 2000]
+  },
+  "ctaShineDurationMs": 1800,
+  "tickerIntervalMs": 1800,
+  "withdrawIntervalMs": 1900,
+  "proofToastIntervalMs": 2400,
+  "claimCounterIntervalMs": 1300,
+  "reducedMotionPolicy": {
+    "disableEnvelopeFloat": true,
+    "disableCtaSweep": true,
+    "disableAvatarFade": true
+  }
+}

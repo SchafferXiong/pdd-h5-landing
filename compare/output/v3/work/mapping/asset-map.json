@@ -1,0 +1,116 @@
+{
+  "assets": [
+    {
+      "key": "logo",
+      "target": "./assets/raw/logo.png",
+      "usage": "brand logo in loading/footer",
+      "preload": true,
+      "fallbackClass": "is-fallback-logo"
+    },
+    {
+      "key": "envelope_closed",
+      "target": "./assets/processed/envelope-closed.svg",
+      "usage": "loading envelope closed state",
+      "preload": true,
+      "fallbackClass": "is-fallback-envelope"
+    },
+    {
+      "key": "envelope_open",
+      "target": "./assets/processed/envelope-open.svg",
+      "usage": "loading envelope open state",
+      "preload": true,
+      "fallbackClass": "is-fallback-envelope"
+    },
+    {
+      "key": "cta_shine",
+      "target": "./assets/processed/cta-shine.svg",
+      "usage": "cta shine overlay texture",
+      "preload": true,
+      "fallbackClass": "is-fallback-cta-shine"
+    },
+    {
+      "key": "bg_pattern",
+      "target": "./assets/backgrounds/bg-pattern.svg",
+      "usage": "global background texture",
+      "preload": false,
+      "fallbackClass": "is-fallback-bg"
+    },
+    {
+      "key": "icon_gift",
+      "target": "./assets/icons/icon-gift.svg",
+      "usage": "benefit gift icon",
+      "preload": true,
+      "fallbackClass": "is-fallback-icon"
+    },
+    {
+      "key": "icon_video",
+      "target": "./assets/icons/icon-video.svg",
+      "usage": "benefit video icon",
+      "preload": true,
+      "fallbackClass": "is-fallback-icon"
+    },
+    {
+      "key": "icon_flash",
+      "target": "./assets/icons/icon-flash.svg",
+      "usage": "benefit withdraw icon",
+      "preload": true,
+      "fallbackClass": "is-fallback-icon"
+    },
+    {
+      "key": "icon_checkin",
+      "target": "./assets/icons/icon-checkin.svg",
+      "usage": "benefit check-in icon",
+      "preload": true,
+      "fallbackClass": "is-fallback-icon"
+    },
+    {
+      "key": "icon_download",
+      "target": "./assets/icons/icon-download.svg",
+      "usage": "proof/download icon",
+      "preload": false,
+      "fallbackClass": "is-fallback-icon"
+    },
+    {
+      "key": "icon_user_add",
+      "target": "./assets/icons/icon-user-add.svg",
+      "usage": "proof/register icon",
+      "preload": false,
+      "fallbackClass": "is-fallback-icon"
+    },
+    {
+      "key": "icon_wallet",
+      "target": "./assets/icons/icon-wallet.svg",
+      "usage": "proof/wallet icon",
+      "preload": false,
+      "fallbackClass": "is-fallback-icon"
+    },
+    {
+      "key": "step_install",
+      "target": "./assets/icons/step-install.svg",
+      "usage": "step 1 icon",
+      "preload": true,
+      "fallbackClass": "is-fallback-step"
+    },
+    {
+      "key": "step_register",
+      "target": "./assets/icons/step-register.svg",
+      "usage": "step 2 icon",
+      "preload": true,
+      "fallbackClass": "is-fallback-step"
+    },
+    {
+      "key": "step_withdraw",
+      "target": "./assets/icons/step-withdraw.svg",
+      "usage": "step 3 icon",
+      "preload": true,
+      "fallbackClass": "is-fallback-step"
+    },
+    {
+      "key": "avatar_pool",
+      "target": "./assets/avatars/avatar-01.svg",
+      "usage": "ticker and withdraw row avatars",
+      "preload": true,
+      "fallbackClass": "is-fallback-avatar"
+    }
+  ]
+}

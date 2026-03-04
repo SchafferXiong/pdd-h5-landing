@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#e73a35" />
+    <title>快手极速版 - 看视频领现金（V3）</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=ZCOOL+QingKe+HuangYou&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-download-url="https://app.mi.com/details?id=com.kuaishou.nebula">
+    <div class="loading-screen" id="loadingScreen" aria-live="polite">
+      <div class="loading-shell">
+        <p class="loading-title">快手极速版 - 看视频领现金</p>
+
+        <div class="loading-envelope-stack" aria-hidden="true">
+          <img
+            id="loadingEnvelopeClosed"
+            class="loading-envelope loading-envelope-closed"
+            src="./assets/processed/envelope-closed.svg"
+            alt=""
+            data-fallback-class="is-fallback-envelope"
+            loading="eager"
+          />
+          <img
+            id="loadingEnvelopeOpen"
+            class="loading-envelope loading-envelope-open"
+            src="./assets/processed/envelope-open.svg"
+            alt=""
+            data-fallback-class="is-fallback-envelope"
+            loading="eager"
+          />
+        </div>
+
+        <h1>红包正在打开中...</h1>
+
+        <p class="loading-status-text" id="loadingStatusText" aria-live="polite">正在校验新人福利资格...</p>
+
+        <div class="loading-status" aria-hidden="true">
+          <span class="spin-ring"></span>
+          <span class="spin-ring spin-ring-alt"></span>
+        </div>
+
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-label="红包打开进度"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+          id="loadingProgress"
+        >
+          <div class="progress-value" id="progressValue"></div>
+        </div>
+
+        <p class="loading-tip">0-2s 自动加载进入下一屏</p>
+
+        <div class="loading-brand">
+          <img src="./assets/raw/logo.png" alt="快手极速版" loading="eager" data-fallback-class="is-fallback-logo" />
+          <p>
+            <strong>快手极速版</strong>
+            <span>看视频 · 赚现金</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <main id="mainPage" hidden>
+      <div class="main-brand-chip" aria-label="快手极速版品牌标识">
+        <img
+          id="appLogoMain"
+          data-role="app-logo"
+          src="./assets/raw/logo.png"
+          alt="快手极速版 LOGO"
+          data-fallback-class="is-fallback-logo"
+          loading="eager"
+        />
+        <p>
+          <strong>快手极速版</strong>
+          <span>官方红包活动</span>
+        </p>
+      </div>
+
+      <header class="top-banner" aria-label="实时领取动态">
+        <img
+          id="tickerAvatar"
+          class="ticker-avatar"
+          src="./assets/avatars/avatar-01.svg"
+          alt="实时用户头像"
+          data-fallback-class="is-fallback-avatar"
+          loading="eager"
+        />
+        <p id="liveTicker">用户 139****6789 刚刚提现 ¥10.00</p>
+        <p class="banner-countdown">倒计时 <strong id="countdown">01:59</strong></p>
+      </header>
+
+      <section class="hero-card" id="heroCard">
+        <h2>恭喜你获得现金红包</h2>
+
+        <article class="amount-card" aria-live="polite">
+          <div class="amount-card-deco" aria-hidden="true"></div>
+          <p>您的红包金额 <strong id="rewardAmount">¥8.80</strong></p>
+          <small>已有 <em id="claimCount">328,691</em> 人领取</small>
+        </article>
+
+        <div class="benefit-grid" aria-label="红包权益">
+          <article class="benefit-item" data-benefit-key="gift">
+            <img
+              class="benefit-icon-img"
+              src="./assets/icons/icon-gift.svg"
+              alt="新人红包"
+              data-fallback-class="is-fallback-icon"
+              loading="lazy"
+            />
+            <h3>新人红包</h3>
+            <p>最高 38 元</p>
+          </article>
+          <article class="benefit-item" data-benefit-key="video">
+            <img
+              class="benefit-icon-img"
+              src="./assets/icons/icon-video.svg"
+              alt="看视频赚钱"
+              data-fallback-class="is-fallback-icon"
+              loading="lazy"
+            />
+            <h3>看视频赚钱</h3>
+            <p>日赚 50+</p>
+          </article>
+          <article class="benefit-item" data-benefit-key="flash">
+            <img
+              class="benefit-icon-img"
+              src="./assets/icons/icon-flash.svg"
+              alt="秒速提现"
+              data-fallback-class="is-fallback-icon"
+              loading="lazy"
+            />
+            <h3>秒速提现</h3>
+            <p>0.3 元可提</p>
+          </article>
+          <article class="benefit-item" data-benefit-key="checkin">
+            <img
+              class="benefit-icon-img"
+              src="./assets/icons/icon-checkin.svg"
+              alt="签到奖励"
+              data-fallback-class="is-fallback-icon"
+              loading="lazy"
+            />
+            <h3>签到奖励</h3>
+            <p>7 天翻 10 倍</p>
+          </article>
+        </div>
+
+        <article class="withdraw-feed" aria-label="提现动态列表">
+          <h3>最新提现动态</h3>
+          <ul id="withdrawList"></ul>
+        </article>
+      </section>
+
+      <section class="proof-card" id="proofCard" aria-label="价值证明">
+        <header>
+          <p>为什么现在领最划算</p>
+          <h2>新用户三重现金加速</h2>
+        </header>
+
+        <div class="proof-points">
+          <article data-proof-key="gift">
+            <img class="proof-icon" src="./assets/icons/icon-gift.svg" alt="新人红包" data-fallback-class="is-fallback-icon" loading="lazy" />
+            <div>
+              <h3>新人红包 (¥5-10)</h3>
+              <p>注册即领，页面金额实时浮动</p>
+            </div>
+          </article>
+          <article data-proof-key="video">
+            <img class="proof-icon" src="./assets/icons/icon-video.svg" alt="看视频" data-fallback-class="is-fallback-icon" loading="lazy" />
+            <div>
+              <h3>看视频赚现金</h3>
+              <p>每天刷视频可持续累计收益</p>
+            </div>
+          </article>
+          <article data-proof-key="flash">
+            <img class="proof-icon" src="./assets/icons/icon-wallet.svg" alt="提现" data-fallback-class="is-fallback-icon" loading="lazy" />
+            <div>
+              <h3>秒速提现</h3>
+              <p>无高门槛，到账速度快</p>
+            </div>
+          </article>
+          <article data-proof-key="checkin">
+            <img class="proof-icon" src="./assets/icons/icon-checkin.svg" alt="签到" data-fallback-class="is-fallback-icon" loading="lazy" />
+            <div>
+              <h3>签到奖励</h3>
+              <p>连续签到收益更高</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="proof-toast" id="proofToast">恭喜用户 39****2211 刚刚提现 ¥10 元！</p>
+      </section>
+
+      <section class="convert-card" id="convertCard">
+        <h2>三步领钱流程</h2>
+        <ol>
+          <li data-step-key="install">
+            <img class="step-icon-img" src="./assets/icons/step-install.svg" alt="下载安装" data-fallback-class="is-fallback-step" loading="lazy" />
+            <div>
+              <strong>下载安装</strong>
+              <span>快手极速版 App</span>
+            </div>
+          </li>
+          <li data-step-key="register">
+            <img class="step-icon-img" src="./assets/icons/step-register.svg" alt="注册登录" data-fallback-class="is-fallback-step" loading="lazy" />
+            <div>
+              <strong>注册登录</strong>
+              <span>新人身份验证</span>
+            </div>
+          </li>
+          <li data-step-key="withdraw">
+            <img class="step-icon-img" src="./assets/icons/step-withdraw.svg" alt="领取提现" data-fallback-class="is-fallback-step" loading="lazy" />
+            <div>
+              <strong>领取提现</strong>
+              <span>现金秒到账</span>
+            </div>
+          </li>
+        </ol>
+
+        <button class="cta-main" type="button" data-cta="main_flow">
+          <span class="cta-shine-layer" aria-hidden="true"></span>
+          <img
+            class="cta-logo"
+            data-role="app-logo"
+            src="./assets/raw/logo.png"
+            alt=""
+            aria-hidden="true"
+            data-fallback-class="is-fallback-logo"
+            loading="lazy"
+          />
+          <span class="cta-label">立即下载 领现金红包</span>
+        </button>
+      </section>
+
+      <footer class="page-foot">
+        <p>唯一主要交互：点击「立即下载」进入应用商店 / APK 下载</p>
+      </footer>
+    </main>
+
+    <div class="sticky-cta-wrap" role="region" aria-label="固定下载入口" hidden id="stickyWrap">
+      <button class="cta-main cta-sticky" type="button" data-cta="sticky_bottom">
+        <span class="cta-shine-layer" aria-hidden="true"></span>
+        <img
+          class="cta-logo"
+          data-role="app-logo"
+          src="./assets/raw/logo.png"
+          alt=""
+          aria-hidden="true"
+          data-fallback-class="is-fallback-logo"
+          loading="lazy"
+        />
+        <span class="cta-label">立即下载 领现金红包</span>
+      </button>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
