@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#1677ff" />
+    <meta name="description" content="千问 App：碎片变精华，上传文件一键出报告。" />
+    <title>千问 App - 碎片变精华</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800;900&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main class="page" id="pageRoot">
+      <header class="top-strip" aria-label="品牌与试用状态">
+        <div class="brand-main">
+          <img
+            id="brandIconPrimary"
+            class="brand-main-icon"
+            data-brand-icon
+            src="./assets/img/generated/qianwen-app-icon-192.png"
+            alt="千问 App 图标"
+            width="56"
+            height="56"
+          />
+          <div class="brand-main-copy">
+            <p class="brand-name" id="brandName">千问 App</p>
+            <p class="brand-sub">上传文件，一键出报告</p>
+          </div>
+        </div>
+
+        <aside class="trial-chip" id="trialChip" aria-live="polite">
+          <span>免费试用倒计时</span>
+          <strong id="trialCountdown">01:59</strong>
+        </aside>
+      </header>
+
+      <section class="hero" aria-label="碎片变精华演示区">
+        <div class="hero-copy">
+          <p class="hero-kicker">碎片变精华</p>
+          <h1 id="heroTitle">上传文件，一键出报告</h1>
+          <p id="heroSub">几秒提炼摘要、关键词、结构化报告</p>
+        </div>
+
+        <article
+          class="transform-stage"
+          id="transformStage"
+          role="button"
+          tabindex="0"
+          aria-label="点击触发文件吸入和报告生成动画"
+        >
+          <div class="stage-badge" aria-hidden="true">
+            <img
+              data-brand-icon
+              src="./assets/img/generated/qianwen-app-icon-192.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+            <span>千问 AI 辅助器</span>
+          </div>
+
+          <div class="orbit" aria-hidden="true">
+            <span class="doc-token token-a">PDF</span>
+            <span class="doc-token token-b">DOCX</span>
+            <span class="doc-token token-c">XLS</span>
+            <span class="doc-token token-d">PPT</span>
+            <span class="doc-token token-e">TXT</span>
+            <span class="doc-token token-f">MD</span>
+            <span class="doc-token token-g">IMG</span>
+            <span class="doc-token token-h">CSV</span>
+          </div>
+
+          <div class="ai-core" aria-hidden="true">
+            <span class="core-ring ring-a"></span>
+            <span class="core-ring ring-b"></span>
+            <strong>AI</strong>
+          </div>
+
+          <p class="stage-phase" id="stagePhase">点击开始：文件吸入 AI，几秒生成精华报告</p>
+
+          <div class="synth-status" id="synthStatus" aria-hidden="true">
+            <span>正在提炼关键信息...</span>
+            <div class="synth-bar">
+              <span id="synthProgress"></span>
+            </div>
+          </div>
+
+          <div class="report-burst" id="reportBurst" aria-live="polite">
+            <article class="burst-card summary-card">
+              <p class="burst-label">精华摘要</p>
+              <p class="burst-text" id="summaryText">已准备好，点击开始生成</p>
+            </article>
+
+            <article class="burst-card keyword-card">
+              <p class="burst-label">关键词</p>
+              <div class="keywords" id="keywordList"></div>
+            </article>
+
+            <article class="burst-card report-card">
+              <p class="burst-label">报告排版</p>
+              <p class="report-title" id="reportTitle">《智能办公提炼报告》</p>
+              <ul id="reportBullets"></ul>
+            </article>
+          </div>
+        </article>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="transformBtn" type="button">上传文件，一键出报告</button>
+          <button class="btn btn-secondary" id="heroDownloadBtn" type="button" data-cta="hero_ready" hidden>
+            下载千问，查看完整报告
+          </button>
+        </div>
+      </section>
+
+      <section class="capability" id="capabilitySection" aria-label="更多能力展示">
+        <h2 id="secondTitle">不止文档摘要，千问还能一键完成更多办公任务</h2>
+        <div class="cap-grid" id="capabilityList"></div>
+        <button class="btn btn-primary cap-cta" type="button" data-cta="second_screen">下载千问，立即体验</button>
+      </section>
+
+      <footer class="foot-note">
+        <p>演示数据为示例，能力以 App 实际版本为准。</p>
+      </footer>
+    </main>
+
+    <div class="sticky-cta-wrap" id="stickyCta">
+      <button class="btn btn-primary sticky-cta" type="button" data-cta="sticky_bottom">
+        <img
+          data-brand-icon
+          src="./assets/img/generated/qianwen-app-icon-192.png"
+          alt="千问 App 图标"
+          width="20"
+          height="20"
+        />
+        <span>下载千问，立即体验</span>
+      </button>
+    </div>
+
+    <section class="live-feed" aria-label="实时播报" aria-live="polite">
+      <div class="live-feed__mask">
+        <div class="live-feed__track" id="liveFeedTrack">
+          <p class="feed-line" id="feedLineTop">用户 138****8291 刚完成《市场周报》精华摘要，领取 7 天高级版</p>
+          <p class="feed-line" id="feedLineBottom">用户 151****6208 刚完成《项目复盘》精华摘要，领取 PPT 模板礼包</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

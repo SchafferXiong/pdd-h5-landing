@@ -1,0 +1,385 @@
+{
+  "runId": "audit-20260305-150532",
+  "timestamp": "2026-03-05T07:05:46.490Z",
+  "target": "http://127.0.0.1:4173/artifacts/landings/landing-20260305-150504/index.html",
+  "targetPath": "/artifacts/landings/landing-20260305-150504/index.html",
+  "targetLocalFilePath": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/landings/landing-20260305-150504/index.html",
+  "targetLocalFileUrl": "file:///Users/feng/Desktop/codexLandingPageConstructor/artifacts/landings/landing-20260305-150504/index.html",
+  "mode": "report_only",
+  "pass": true,
+  "blocked": false,
+  "totalScore": 100,
+  "threshold": 85,
+  "riskLevel": "low",
+  "categoryScores": {
+    "assetIntegrity": {
+      "score": 22,
+      "max": 22
+    },
+    "layoutVisibility": {
+      "score": 22,
+      "max": 22
+    },
+    "typographyReadability": {
+      "score": 14,
+      "max": 14
+    },
+    "responsiveStability": {
+      "score": 14,
+      "max": 14
+    },
+    "interactionConversion": {
+      "score": 10,
+      "max": 10
+    },
+    "accessibilityBaseline": {
+      "score": 8,
+      "max": 8
+    },
+    "disclosureCompliance": {
+      "score": 10,
+      "max": 10
+    }
+  },
+  "findings": [],
+  "optimizationSuggestions": [
+    {
+      "priority": "P1",
+      "issue": "关键图片缺少加载兜底策略",
+      "action": "为关键图片补充 onerror 占位与本地后备资源，避免出现破图图标。",
+      "expected_gain": "提升首屏稳定性与品牌信任度"
+    },
+    {
+      "priority": "P2",
+      "issue": "文案长度与容器约束可能不匹配",
+      "action": "为标题和正文设置最大行数与自适应字号策略，规避异常换行。",
+      "expected_gain": "提升阅读流畅度与视觉一致性"
+    },
+    {
+      "priority": "P2",
+      "issue": "固定层与主内容层级可能冲突",
+      "action": "梳理 z-index 分层规范并统一底部安全区间距。",
+      "expected_gain": "提升交互稳定性并减少误触"
+    }
+  ],
+  "evidence": {
+    "screenshots": [
+      {
+        "viewport": "360x780",
+        "type": "view",
+        "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/landing-20260305-150504/audit-20260305-150532/view-360x780.png"
+      },
+      {
+        "viewport": "360x780",
+        "type": "full",
+        "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/landing-20260305-150504/audit-20260305-150532/full-360x780.png"
+      },
+      {
+        "viewport": "390x844",
+        "type": "view",
+        "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/landing-20260305-150504/audit-20260305-150532/view-390x844.png"
+      },
+      {
+        "viewport": "390x844",
+        "type": "full",
+        "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/landing-20260305-150504/audit-20260305-150532/full-390x844.png"
+      },
+      {
+        "viewport": "430x932",
+        "type": "view",
+        "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/landing-20260305-150504/audit-20260305-150532/view-430x932.png"
+      },
+      {
+        "viewport": "430x932",
+        "type": "full",
+        "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/landing-20260305-150504/audit-20260305-150532/full-430x932.png"
+      }
+    ],
+    "viewportResults": [
+      {
+        "viewport": "360x780",
+        "width": 360,
+        "height": 780,
+        "auditData": {
+          "brokenImages": [],
+          "missingKeyImages": [],
+          "brokenKeyImages": [],
+          "logos": {
+            "visibleCount": 2,
+            "enoughSizeCount": 2,
+            "samples": [
+              {
+                "label": "img#brandIconPrimary.brand-main-icon",
+                "visible": true,
+                "rect": {
+                  "left": 19,
+                  "top": 20.5,
+                  "right": 75,
+                  "bottom": 76.5,
+                  "width": 56,
+                  "height": 56
+                }
+              },
+              {
+                "label": "img",
+                "visible": true,
+                "rect": {
+                  "left": 179.765625,
+                  "top": 297.9872741699219,
+                  "right": 227.765625,
+                  "bottom": 345.9872741699219,
+                  "width": 48,
+                  "height": 48
+                }
+              }
+            ]
+          },
+          "primaryCta": {
+            "exists": true,
+            "visible": true,
+            "label": "button#transformBtn.btn.btn-primary",
+            "rect": {
+              "left": 23,
+              "top": 627.875,
+              "right": 337,
+              "bottom": 679.875,
+              "width": 314,
+              "height": 52
+            },
+            "occluded": false
+          },
+          "ctaIssues": [
+            {
+              "label": "button#transformBtn.btn.btn-primary",
+              "text": "上传文件，一键出报告",
+              "width": 314,
+              "height": 52,
+              "smallTapTarget": false,
+              "occluded": false
+            }
+          ],
+          "textOverflow": [],
+          "typographyIssues": [],
+          "heroTitleLines": 2,
+          "horizontalOverflow": {
+            "hasOverflow": false,
+            "scrollWidth": 360,
+            "clientWidth": 360
+          },
+          "fixedOverlaps": [],
+          "reducedMotionRuleFound": true,
+          "meta": {
+            "viewportWidth": 360,
+            "viewportHeight": 780
+          }
+        },
+        "evidenceScreens": [
+          {
+            "viewport": "360x780",
+            "type": "view",
+            "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/landing-20260305-150504/audit-20260305-150532/view-360x780.png"
+          },
+          {
+            "viewport": "360x780",
+            "type": "full",
+            "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/landing-20260305-150504/audit-20260305-150532/full-360x780.png"
+          }
+        ]
+      },
+      {
+        "viewport": "390x844",
+        "width": 390,
+        "height": 844,
+        "auditData": {
+          "brokenImages": [],
+          "missingKeyImages": [],
+          "brokenKeyImages": [],
+          "logos": {
+            "visibleCount": 2,
+            "enoughSizeCount": 2,
+            "samples": [
+              {
+                "label": "img#brandIconPrimary.brand-main-icon",
+                "visible": true,
+                "rect": {
+                  "left": 19,
+                  "top": 20.5,
+                  "right": 75,
+                  "bottom": 76.5,
+                  "width": 56,
+                  "height": 56
+                }
+              },
+              {
+                "label": "img",
+                "visible": true,
+                "rect": {
+                  "left": 209.765625,
+                  "top": 298.2372741699219,
+                  "right": 257.765625,
+                  "bottom": 346.2372741699219,
+                  "width": 48,
+                  "height": 48
+                }
+              }
+            ]
+          },
+          "primaryCta": {
+            "exists": true,
+            "visible": true,
+            "label": "button#transformBtn.btn.btn-primary",
+            "rect": {
+              "left": 23,
+              "top": 628.125,
+              "right": 367,
+              "bottom": 680.125,
+              "width": 344,
+              "height": 52
+            },
+            "occluded": false
+          },
+          "ctaIssues": [
+            {
+              "label": "button#transformBtn.btn.btn-primary",
+              "text": "上传文件，一键出报告",
+              "width": 344,
+              "height": 52,
+              "smallTapTarget": false,
+              "occluded": false
+            }
+          ],
+          "textOverflow": [],
+          "typographyIssues": [],
+          "heroTitleLines": 2,
+          "horizontalOverflow": {
+            "hasOverflow": false,
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "fixedOverlaps": [],
+          "reducedMotionRuleFound": true,
+          "meta": {
+            "viewportWidth": 390,
+            "viewportHeight": 844
+          }
+        },
+        "evidenceScreens": [
+          {
+            "viewport": "390x844",
+            "type": "view",
+            "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/landing-20260305-150504/audit-20260305-150532/view-390x844.png"
+          },
+          {
+            "viewport": "390x844",
+            "type": "full",
+            "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/landing-20260305-150504/audit-20260305-150532/full-390x844.png"
+          }
+        ]
+      },
+      {
+        "viewport": "430x932",
+        "width": 430,
+        "height": 932,
+        "auditData": {
+          "brokenImages": [],
+          "missingKeyImages": [],
+          "brokenKeyImages": [],
+          "logos": {
+            "visibleCount": 2,
+            "enoughSizeCount": 2,
+            "samples": [
+              {
+                "label": "img#brandIconPrimary.brand-main-icon",
+                "visible": true,
+                "rect": {
+                  "left": 19,
+                  "top": 20.5,
+                  "right": 75,
+                  "bottom": 76.5,
+                  "width": 56,
+                  "height": 56
+                }
+              },
+              {
+                "label": "img",
+                "visible": true,
+                "rect": {
+                  "left": 249.765625,
+                  "top": 307.46173095703125,
+                  "right": 297.765625,
+                  "bottom": 355.46173095703125,
+                  "width": 48,
+                  "height": 48
+                }
+              }
+            ]
+          },
+          "primaryCta": {
+            "exists": true,
+            "visible": true,
+            "label": "button#transformBtn.btn.btn-primary",
+            "rect": {
+              "left": 23,
+              "top": 637.359375,
+              "right": 407,
+              "bottom": 689.359375,
+              "width": 384,
+              "height": 52
+            },
+            "occluded": false
+          },
+          "ctaIssues": [
+            {
+              "label": "button#transformBtn.btn.btn-primary",
+              "text": "上传文件，一键出报告",
+              "width": 384,
+              "height": 52,
+              "smallTapTarget": false,
+              "occluded": false
+            }
+          ],
+          "textOverflow": [],
+          "typographyIssues": [],
+          "heroTitleLines": 2,
+          "horizontalOverflow": {
+            "hasOverflow": false,
+            "scrollWidth": 430,
+            "clientWidth": 430
+          },
+          "fixedOverlaps": [],
+          "reducedMotionRuleFound": true,
+          "meta": {
+            "viewportWidth": 430,
+            "viewportHeight": 932
+          }
+        },
+        "evidenceScreens": [
+          {
+            "viewport": "430x932",
+            "type": "view",
+            "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/landing-20260305-150504/audit-20260305-150532/view-430x932.png"
+          },
+          {
+            "viewport": "430x932",
+            "type": "full",
+            "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/landing-20260305-150504/audit-20260305-150532/full-430x932.png"
+          }
+        ]
+      }
+    ]
+  },
+  "disclosurePolicy": {
+    "visibility": "public_only",
+    "hide_reasoning": true,
+    "forbiddenTerms": [
+      "internal_thoughts",
+      "reasoning_chain",
+      "step_by_step_thinking",
+      "思考过程",
+      "推理过程",
+      "chain of thought",
+      "cot"
+    ],
+    "violations": []
+  }
+}

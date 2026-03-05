@@ -1,0 +1,106 @@
+{
+  "landingId": "landing-20260305-150611",
+  "landingPath": "artifacts/landings/landing-20260305-150611/index.html",
+  "landingDir": "artifacts/landings/landing-20260305-150611",
+  "targetUrl": "http://127.0.0.1:4173/artifacts/landings/landing-20260305-150611/index.html",
+  "targetLocalFilePath": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/landings/landing-20260305-150611/index.html",
+  "targetLocalFileUrl": "file:///Users/feng/Desktop/codexLandingPageConstructor/artifacts/landings/landing-20260305-150611/index.html",
+  "minScore": 60,
+  "maxIterations": 1,
+  "reachedTarget": true,
+  "finalScore": 69,
+  "finalRisk": "critical",
+  "totalIterations": 1,
+  "reportRoot": "artifacts/audits/landing-20260305-150611",
+  "iterations": [
+    {
+      "iteration": 1,
+      "score": 69,
+      "riskLevel": "critical",
+      "findingsCount": 10,
+      "pass": false,
+      "blocked": false,
+      "reportPath": "artifacts/audits/runs/landing-20260305-150611/audit-20260305-150612/audit-report.md",
+      "jsonPath": "artifacts/audits/runs/landing-20260305-150611/audit-20260305-150612/audit-result.json",
+      "topFindings": [
+        {
+          "severity": "P0",
+          "title": "主 CTA 被其他元素遮挡",
+          "detail": "button#transformBtn.btn.btn-primary 存在遮挡风险。",
+          "selector": "button#transformBtn.btn.btn-primary",
+          "viewport": "360x780"
+        },
+        {
+          "severity": "P0",
+          "title": "主 CTA 被其他元素遮挡",
+          "detail": "button#transformBtn.btn.btn-primary 存在遮挡风险。",
+          "selector": "button#transformBtn.btn.btn-primary",
+          "viewport": "390x844"
+        },
+        {
+          "severity": "P1",
+          "title": "存在被遮挡的转化按钮",
+          "detail": "检测到 1 个 CTA 遮挡风险。",
+          "selector": "button#transformBtn.btn.btn-primary",
+          "viewport": "360x780"
+        },
+        {
+          "severity": "P1",
+          "title": "检测到文本裁切或容器溢出",
+          "detail": "检测到 2 处文本存在裁切或溢出。",
+          "selector": "h1#heroTitle",
+          "viewport": "360x780"
+        },
+        {
+          "severity": "P1",
+          "title": "存在被遮挡的转化按钮",
+          "detail": "检测到 1 个 CTA 遮挡风险。",
+          "selector": "button#transformBtn.btn.btn-primary",
+          "viewport": "390x844"
+        },
+        {
+          "severity": "P1",
+          "title": "检测到文本裁切或容器溢出",
+          "detail": "检测到 3 处文本存在裁切或溢出。",
+          "selector": "h1#heroTitle",
+          "viewport": "390x844"
+        },
+        {
+          "severity": "P1",
+          "title": "检测到文本裁切或容器溢出",
+          "detail": "检测到 3 处文本存在裁切或溢出。",
+          "selector": "h1#heroTitle",
+          "viewport": "430x932"
+        },
+        {
+          "severity": "P2",
+          "title": "发现字号或行高不协调",
+          "detail": "检测到 3 处排版参数异常。",
+          "selector": "h1#heroTitle",
+          "viewport": "360x780"
+        }
+      ],
+      "suggestions": [
+        {
+          "priority": "P0",
+          "issue": "主 CTA 被其他元素遮挡",
+          "action": "调整固定层 z-index 与底部安全区，确保 CTA 不被覆盖。",
+          "expected_gain": "降低遮挡风险并提升信息可达性"
+        },
+        {
+          "priority": "P1",
+          "issue": "存在被遮挡的转化按钮",
+          "action": "重新梳理 fixed/sticky 元素层级，避免遮挡交互控件。",
+          "expected_gain": "降低遮挡风险并提升信息可达性"
+        },
+        {
+          "priority": "P1",
+          "issue": "检测到文本裁切或容器溢出",
+          "action": "调整文本容器宽度、行高与换行策略，必要时限制文案长度。",
+          "expected_gain": "降低遮挡风险并提升信息可达性"
+        }
+      ],
+      "actionsApplied": []
+    }
+  ]
+}

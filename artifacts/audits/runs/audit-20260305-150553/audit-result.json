@@ -1,0 +1,738 @@
+{
+  "runId": "audit-20260305-150553",
+  "timestamp": "2026-03-05T07:06:07.557Z",
+  "target": "http://127.0.0.1:4173/apps/h5-main/index.html",
+  "targetPath": "/apps/h5-main/index.html",
+  "targetLocalFilePath": "/Users/feng/Desktop/codexLandingPageConstructor/apps/h5-main/index.html",
+  "targetLocalFileUrl": "file:///Users/feng/Desktop/codexLandingPageConstructor/apps/h5-main/index.html",
+  "mode": "report_only",
+  "pass": false,
+  "blocked": false,
+  "totalScore": 69,
+  "threshold": 85,
+  "riskLevel": "critical",
+  "categoryScores": {
+    "assetIntegrity": {
+      "score": 22,
+      "max": 22
+    },
+    "layoutVisibility": {
+      "score": 0,
+      "max": 22
+    },
+    "typographyReadability": {
+      "score": 5,
+      "max": 14
+    },
+    "responsiveStability": {
+      "score": 14,
+      "max": 14
+    },
+    "interactionConversion": {
+      "score": 10,
+      "max": 10
+    },
+    "accessibilityBaseline": {
+      "score": 8,
+      "max": 8
+    },
+    "disclosureCompliance": {
+      "score": 10,
+      "max": 10
+    }
+  },
+  "findings": [
+    {
+      "id": "cta-occluded-360x780",
+      "severity": "P0",
+      "category": "layoutVisibility",
+      "title": "主 CTA 被其他元素遮挡",
+      "detail": "button#transformBtn.btn.btn-primary 存在遮挡风险。",
+      "impact": "主转化入口可点区域受阻，直接影响点击率。",
+      "action": "调整固定层 z-index 与底部安全区，确保 CTA 不被覆盖。",
+      "selector": "button#transformBtn.btn.btn-primary",
+      "viewport": "360x780",
+      "evidence": "view-360x780.png"
+    },
+    {
+      "id": "cta-occluded-390x844",
+      "severity": "P0",
+      "category": "layoutVisibility",
+      "title": "主 CTA 被其他元素遮挡",
+      "detail": "button#transformBtn.btn.btn-primary 存在遮挡风险。",
+      "impact": "主转化入口可点区域受阻，直接影响点击率。",
+      "action": "调整固定层 z-index 与底部安全区，确保 CTA 不被覆盖。",
+      "selector": "button#transformBtn.btn.btn-primary",
+      "viewport": "390x844",
+      "evidence": "view-390x844.png"
+    },
+    {
+      "id": "occluded-cta-360x780",
+      "severity": "P1",
+      "category": "layoutVisibility",
+      "title": "存在被遮挡的转化按钮",
+      "detail": "检测到 1 个 CTA 遮挡风险。",
+      "impact": "部分转化入口可能无法稳定触达。",
+      "action": "重新梳理 fixed/sticky 元素层级，避免遮挡交互控件。",
+      "selector": "button#transformBtn.btn.btn-primary",
+      "viewport": "360x780",
+      "evidence": "view-360x780.png"
+    },
+    {
+      "id": "text-overflow-360x780",
+      "severity": "P1",
+      "category": "layoutVisibility",
+      "title": "检测到文本裁切或容器溢出",
+      "detail": "检测到 2 处文本存在裁切或溢出。",
+      "impact": "用户读取关键信息受阻，影响内容理解。",
+      "action": "调整文本容器宽度、行高与换行策略，必要时限制文案长度。",
+      "selector": "h1#heroTitle",
+      "viewport": "360x780",
+      "evidence": "view-360x780.png"
+    },
+    {
+      "id": "occluded-cta-390x844",
+      "severity": "P1",
+      "category": "layoutVisibility",
+      "title": "存在被遮挡的转化按钮",
+      "detail": "检测到 1 个 CTA 遮挡风险。",
+      "impact": "部分转化入口可能无法稳定触达。",
+      "action": "重新梳理 fixed/sticky 元素层级，避免遮挡交互控件。",
+      "selector": "button#transformBtn.btn.btn-primary",
+      "viewport": "390x844",
+      "evidence": "view-390x844.png"
+    },
+    {
+      "id": "text-overflow-390x844",
+      "severity": "P1",
+      "category": "layoutVisibility",
+      "title": "检测到文本裁切或容器溢出",
+      "detail": "检测到 3 处文本存在裁切或溢出。",
+      "impact": "用户读取关键信息受阻，影响内容理解。",
+      "action": "调整文本容器宽度、行高与换行策略，必要时限制文案长度。",
+      "selector": "h1#heroTitle",
+      "viewport": "390x844",
+      "evidence": "view-390x844.png"
+    },
+    {
+      "id": "text-overflow-430x932",
+      "severity": "P1",
+      "category": "layoutVisibility",
+      "title": "检测到文本裁切或容器溢出",
+      "detail": "检测到 3 处文本存在裁切或溢出。",
+      "impact": "用户读取关键信息受阻，影响内容理解。",
+      "action": "调整文本容器宽度、行高与换行策略，必要时限制文案长度。",
+      "selector": "h1#heroTitle",
+      "viewport": "430x932",
+      "evidence": "view-430x932.png"
+    },
+    {
+      "id": "typography-360x780",
+      "severity": "P2",
+      "category": "typographyReadability",
+      "title": "发现字号或行高不协调",
+      "detail": "检测到 3 处排版参数异常。",
+      "impact": "影响阅读舒适度与页面精致感。",
+      "action": "统一字号梯度与行高比例，正文建议 >=14px，按钮建议 >=16px。",
+      "selector": "h1#heroTitle",
+      "viewport": "360x780",
+      "evidence": "view-360x780.png"
+    },
+    {
+      "id": "typography-390x844",
+      "severity": "P2",
+      "category": "typographyReadability",
+      "title": "发现字号或行高不协调",
+      "detail": "检测到 4 处排版参数异常。",
+      "impact": "影响阅读舒适度与页面精致感。",
+      "action": "统一字号梯度与行高比例，正文建议 >=14px，按钮建议 >=16px。",
+      "selector": "h1#heroTitle",
+      "viewport": "390x844",
+      "evidence": "view-390x844.png"
+    },
+    {
+      "id": "typography-430x932",
+      "severity": "P2",
+      "category": "typographyReadability",
+      "title": "发现字号或行高不协调",
+      "detail": "检测到 4 处排版参数异常。",
+      "impact": "影响阅读舒适度与页面精致感。",
+      "action": "统一字号梯度与行高比例，正文建议 >=14px，按钮建议 >=16px。",
+      "selector": "h1#heroTitle",
+      "viewport": "430x932",
+      "evidence": "view-430x932.png"
+    }
+  ],
+  "optimizationSuggestions": [
+    {
+      "priority": "P0",
+      "issue": "主 CTA 被其他元素遮挡",
+      "action": "调整固定层 z-index 与底部安全区，确保 CTA 不被覆盖。",
+      "expected_gain": "降低遮挡风险并提升信息可达性"
+    },
+    {
+      "priority": "P1",
+      "issue": "存在被遮挡的转化按钮",
+      "action": "重新梳理 fixed/sticky 元素层级，避免遮挡交互控件。",
+      "expected_gain": "降低遮挡风险并提升信息可达性"
+    },
+    {
+      "priority": "P1",
+      "issue": "检测到文本裁切或容器溢出",
+      "action": "调整文本容器宽度、行高与换行策略，必要时限制文案长度。",
+      "expected_gain": "降低遮挡风险并提升信息可达性"
+    }
+  ],
+  "evidence": {
+    "screenshots": [
+      {
+        "viewport": "360x780",
+        "type": "view",
+        "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/audit-20260305-150553/view-360x780.png"
+      },
+      {
+        "viewport": "360x780",
+        "type": "full",
+        "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/audit-20260305-150553/full-360x780.png"
+      },
+      {
+        "viewport": "390x844",
+        "type": "view",
+        "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/audit-20260305-150553/view-390x844.png"
+      },
+      {
+        "viewport": "390x844",
+        "type": "full",
+        "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/audit-20260305-150553/full-390x844.png"
+      },
+      {
+        "viewport": "430x932",
+        "type": "view",
+        "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/audit-20260305-150553/view-430x932.png"
+      },
+      {
+        "viewport": "430x932",
+        "type": "full",
+        "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/audit-20260305-150553/full-430x932.png"
+      }
+    ],
+    "viewportResults": [
+      {
+        "viewport": "360x780",
+        "width": 360,
+        "height": 780,
+        "auditData": {
+          "brokenImages": [],
+          "missingKeyImages": [],
+          "brokenKeyImages": [],
+          "logos": {
+            "visibleCount": 3,
+            "enoughSizeCount": 2,
+            "samples": [
+              {
+                "label": "img#brandIconPrimary.brand-main-icon",
+                "visible": true,
+                "rect": {
+                  "left": 19,
+                  "top": 20.5,
+                  "right": 75,
+                  "bottom": 76.5,
+                  "width": 56,
+                  "height": 56
+                }
+              },
+              {
+                "label": "img",
+                "visible": true,
+                "rect": {
+                  "left": 179.765625,
+                  "top": 281.899658203125,
+                  "right": 227.765625,
+                  "bottom": 329.899658203125,
+                  "width": 48,
+                  "height": 48
+                }
+              },
+              {
+                "label": "img",
+                "visible": true,
+                "rect": {
+                  "left": 88.734375,
+                  "top": 685,
+                  "right": 108.734375,
+                  "bottom": 705,
+                  "width": 20,
+                  "height": 20
+                }
+              }
+            ]
+          },
+          "primaryCta": {
+            "exists": true,
+            "visible": true,
+            "label": "button#transformBtn.btn.btn-primary",
+            "rect": {
+              "left": 23,
+              "top": 699.796875,
+              "right": 337,
+              "bottom": 751.796875,
+              "width": 314,
+              "height": 52
+            },
+            "occluded": true
+          },
+          "ctaIssues": [
+            {
+              "label": "button#transformBtn.btn.btn-primary",
+              "text": "上传文件，一键出报告",
+              "width": 314,
+              "height": 52,
+              "smallTapTarget": false,
+              "occluded": true
+            },
+            {
+              "label": "button.btn.btn-primary.sticky-cta",
+              "text": "下载千问，立即体验",
+              "width": 340,
+              "height": 58,
+              "smallTapTarget": false,
+              "occluded": false
+            }
+          ],
+          "textOverflow": [
+            {
+              "label": "h1#heroTitle",
+              "text": "上传文件，一键出报告",
+              "overflowX": 0,
+              "overflowY": 5,
+              "hasOverflow": true
+            },
+            {
+              "label": "p#brandName.brand-name",
+              "text": "千问 App",
+              "overflowX": 0,
+              "overflowY": 2,
+              "hasOverflow": true
+            }
+          ],
+          "typographyIssues": [
+            {
+              "label": "h1#heroTitle",
+              "text": "上传文件，一键出报告",
+              "fontSize": 35,
+              "lineHeight": 36.75,
+              "ratio": 1.05,
+              "issues": [
+                "line-height ratio 1.05 out of [1.20, 2.00]"
+              ]
+            },
+            {
+              "label": "p#brandName.brand-name",
+              "text": "千问 App",
+              "fontSize": 18,
+              "lineHeight": 18.9,
+              "ratio": 1.0499999999999998,
+              "issues": [
+                "line-height ratio 1.05 out of [1.20, 2.00]"
+              ]
+            },
+            {
+              "label": "p#stagePhase.stage-phase",
+              "text": "点击开始：文件吸入 AI，几秒生成精华报告",
+              "fontSize": 13,
+              "lineHeight": 16.9,
+              "ratio": 1.2999999999999998,
+              "issues": [
+                "font-size 13.0px < 14px"
+              ]
+            }
+          ],
+          "heroTitleLines": 2,
+          "horizontalOverflow": {
+            "hasOverflow": false,
+            "scrollWidth": 360,
+            "clientWidth": 360
+          },
+          "fixedOverlaps": [],
+          "reducedMotionRuleFound": true,
+          "meta": {
+            "viewportWidth": 360,
+            "viewportHeight": 780
+          }
+        },
+        "evidenceScreens": [
+          {
+            "viewport": "360x780",
+            "type": "view",
+            "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/audit-20260305-150553/view-360x780.png"
+          },
+          {
+            "viewport": "360x780",
+            "type": "full",
+            "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/audit-20260305-150553/full-360x780.png"
+          }
+        ]
+      },
+      {
+        "viewport": "390x844",
+        "width": 390,
+        "height": 844,
+        "auditData": {
+          "brokenImages": [],
+          "missingKeyImages": [],
+          "brokenKeyImages": [],
+          "logos": {
+            "visibleCount": 3,
+            "enoughSizeCount": 2,
+            "samples": [
+              {
+                "label": "img#brandIconPrimary.brand-main-icon",
+                "visible": true,
+                "rect": {
+                  "left": 19,
+                  "top": 20.5,
+                  "right": 75,
+                  "bottom": 76.5,
+                  "width": 56,
+                  "height": 56
+                }
+              },
+              {
+                "label": "img",
+                "visible": true,
+                "rect": {
+                  "left": 209.765625,
+                  "top": 282.0962219238281,
+                  "right": 257.765625,
+                  "bottom": 330.0962219238281,
+                  "width": 48,
+                  "height": 48
+                }
+              },
+              {
+                "label": "img",
+                "visible": true,
+                "rect": {
+                  "left": 103.734375,
+                  "top": 749,
+                  "right": 123.734375,
+                  "bottom": 769,
+                  "width": 20,
+                  "height": 20
+                }
+              }
+            ]
+          },
+          "primaryCta": {
+            "exists": true,
+            "visible": true,
+            "label": "button#transformBtn.btn.btn-primary",
+            "rect": {
+              "left": 23,
+              "top": 699.984375,
+              "right": 367,
+              "bottom": 751.984375,
+              "width": 344,
+              "height": 52
+            },
+            "occluded": true
+          },
+          "ctaIssues": [
+            {
+              "label": "button#transformBtn.btn.btn-primary",
+              "text": "上传文件，一键出报告",
+              "width": 344,
+              "height": 52,
+              "smallTapTarget": false,
+              "occluded": true
+            },
+            {
+              "label": "button.btn.btn-primary.sticky-cta",
+              "text": "下载千问，立即体验",
+              "width": 370,
+              "height": 58,
+              "smallTapTarget": false,
+              "occluded": false
+            }
+          ],
+          "textOverflow": [
+            {
+              "label": "h1#heroTitle",
+              "text": "上传文件，一键出报告",
+              "overflowX": 0,
+              "overflowY": 5,
+              "hasOverflow": true
+            },
+            {
+              "label": "p#brandName.brand-name",
+              "text": "千问 App",
+              "overflowX": 0,
+              "overflowY": 2,
+              "hasOverflow": true
+            },
+            {
+              "label": "h2#secondTitle",
+              "text": "不止文档摘要，千问还能一键完成更多办公任务",
+              "overflowX": 0,
+              "overflowY": 2,
+              "hasOverflow": true
+            }
+          ],
+          "typographyIssues": [
+            {
+              "label": "h1#heroTitle",
+              "text": "上传文件，一键出报告",
+              "fontSize": 35.1,
+              "lineHeight": 36.855,
+              "ratio": 1.0499999999999998,
+              "issues": [
+                "line-height ratio 1.05 out of [1.20, 2.00]"
+              ]
+            },
+            {
+              "label": "p#brandName.brand-name",
+              "text": "千问 App",
+              "fontSize": 18,
+              "lineHeight": 18.9,
+              "ratio": 1.0499999999999998,
+              "issues": [
+                "line-height ratio 1.05 out of [1.20, 2.00]"
+              ]
+            },
+            {
+              "label": "p#stagePhase.stage-phase",
+              "text": "点击开始：文件吸入 AI，几秒生成精华报告",
+              "fontSize": 13,
+              "lineHeight": 16.9,
+              "ratio": 1.2999999999999998,
+              "issues": [
+                "font-size 13.0px < 14px"
+              ]
+            },
+            {
+              "label": "h2#secondTitle",
+              "text": "不止文档摘要，千问还能一键完成更多办公任务",
+              "fontSize": 26.52,
+              "lineHeight": 30.498,
+              "ratio": 1.1500000000000001,
+              "issues": [
+                "line-height ratio 1.15 out of [1.20, 2.00]"
+              ]
+            }
+          ],
+          "heroTitleLines": 2,
+          "horizontalOverflow": {
+            "hasOverflow": false,
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "fixedOverlaps": [],
+          "reducedMotionRuleFound": true,
+          "meta": {
+            "viewportWidth": 390,
+            "viewportHeight": 844
+          }
+        },
+        "evidenceScreens": [
+          {
+            "viewport": "390x844",
+            "type": "view",
+            "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/audit-20260305-150553/view-390x844.png"
+          },
+          {
+            "viewport": "390x844",
+            "type": "full",
+            "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/audit-20260305-150553/full-390x844.png"
+          }
+        ]
+      },
+      {
+        "viewport": "430x932",
+        "width": 430,
+        "height": 932,
+        "auditData": {
+          "brokenImages": [],
+          "missingKeyImages": [],
+          "brokenKeyImages": [],
+          "logos": {
+            "visibleCount": 3,
+            "enoughSizeCount": 2,
+            "samples": [
+              {
+                "label": "img#brandIconPrimary.brand-main-icon",
+                "visible": true,
+                "rect": {
+                  "left": 19,
+                  "top": 20.5,
+                  "right": 75,
+                  "bottom": 76.5,
+                  "width": 56,
+                  "height": 56
+                }
+              },
+              {
+                "label": "img",
+                "visible": true,
+                "rect": {
+                  "left": 249.765625,
+                  "top": 289.6589050292969,
+                  "right": 297.765625,
+                  "bottom": 337.6589050292969,
+                  "width": 48,
+                  "height": 48
+                }
+              },
+              {
+                "label": "img",
+                "visible": true,
+                "rect": {
+                  "left": 123.734375,
+                  "top": 837,
+                  "right": 143.734375,
+                  "bottom": 857,
+                  "width": 20,
+                  "height": 20
+                }
+              }
+            ]
+          },
+          "primaryCta": {
+            "exists": true,
+            "visible": true,
+            "label": "button#transformBtn.btn.btn-primary",
+            "rect": {
+              "left": 23,
+              "top": 707.546875,
+              "right": 407,
+              "bottom": 759.546875,
+              "width": 384,
+              "height": 52
+            },
+            "occluded": false
+          },
+          "ctaIssues": [
+            {
+              "label": "button#transformBtn.btn.btn-primary",
+              "text": "上传文件，一键出报告",
+              "width": 384,
+              "height": 52,
+              "smallTapTarget": false,
+              "occluded": false
+            },
+            {
+              "label": "button.btn.btn-primary.sticky-cta",
+              "text": "下载千问，立即体验",
+              "width": 410,
+              "height": 58,
+              "smallTapTarget": false,
+              "occluded": false
+            }
+          ],
+          "textOverflow": [
+            {
+              "label": "h1#heroTitle",
+              "text": "上传文件，一键出报告",
+              "overflowX": 0,
+              "overflowY": 7,
+              "hasOverflow": true
+            },
+            {
+              "label": "p#brandName.brand-name",
+              "text": "千问 App",
+              "overflowX": 0,
+              "overflowY": 2,
+              "hasOverflow": true
+            },
+            {
+              "label": "h2#secondTitle",
+              "text": "不止文档摘要，千问还能一键完成更多办公任务",
+              "overflowX": 0,
+              "overflowY": 4,
+              "hasOverflow": true
+            }
+          ],
+          "typographyIssues": [
+            {
+              "label": "h1#heroTitle",
+              "text": "上传文件，一键出报告",
+              "fontSize": 38.7,
+              "lineHeight": 40.635,
+              "ratio": 1.0499999999999998,
+              "issues": [
+                "line-height ratio 1.05 out of [1.20, 2.00]"
+              ]
+            },
+            {
+              "label": "p#brandName.brand-name",
+              "text": "千问 App",
+              "fontSize": 18,
+              "lineHeight": 18.9,
+              "ratio": 1.0499999999999998,
+              "issues": [
+                "line-height ratio 1.05 out of [1.20, 2.00]"
+              ]
+            },
+            {
+              "label": "p#stagePhase.stage-phase",
+              "text": "点击开始：文件吸入 AI，几秒生成精华报告",
+              "fontSize": 13,
+              "lineHeight": 16.9,
+              "ratio": 1.2999999999999998,
+              "issues": [
+                "font-size 13.0px < 14px"
+              ]
+            },
+            {
+              "label": "h2#secondTitle",
+              "text": "不止文档摘要，千问还能一键完成更多办公任务",
+              "fontSize": 29.24,
+              "lineHeight": 33.626,
+              "ratio": 1.15,
+              "issues": [
+                "line-height ratio 1.15 out of [1.20, 2.00]"
+              ]
+            }
+          ],
+          "heroTitleLines": 2,
+          "horizontalOverflow": {
+            "hasOverflow": false,
+            "scrollWidth": 430,
+            "clientWidth": 430
+          },
+          "fixedOverlaps": [],
+          "reducedMotionRuleFound": true,
+          "meta": {
+            "viewportWidth": 430,
+            "viewportHeight": 932
+          }
+        },
+        "evidenceScreens": [
+          {
+            "viewport": "430x932",
+            "type": "view",
+            "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/audit-20260305-150553/view-430x932.png"
+          },
+          {
+            "viewport": "430x932",
+            "type": "full",
+            "path": "/Users/feng/Desktop/codexLandingPageConstructor/artifacts/audits/runs/audit-20260305-150553/full-430x932.png"
+          }
+        ]
+      }
+    ]
+  },
+  "disclosurePolicy": {
+    "visibility": "public_only",
+    "hide_reasoning": true,
+    "forbiddenTerms": [
+      "internal_thoughts",
+      "reasoning_chain",
+      "step_by_step_thinking",
+      "思考过程",
+      "推理过程",
+      "chain of thought",
+      "cot"
+    ],
+    "violations": []
+  }
+}

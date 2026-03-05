@@ -4,7 +4,11 @@
   "description": "拼多多手机版 H5 落地页，目标是 4 秒内促成下载点击。页面已实现视频与利益点联动状态机，并内置 Android 跳转到小米商店拼多多详情页。",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "audit:lp": "node ./tools/audit/landing-audit.mjs --mode report_only",
+    "audit:lp:strict": "node ./tools/audit/landing-audit.mjs --mode strict_block",
+    "landing:generate:audit": "node ./tools/audit/landing-generate-with-audit.mjs --min-score 80 --max-iterations 6",
+    "links:verify": "node ./tools/verify-links.mjs"
   },
   "keywords": [],
   "author": "",

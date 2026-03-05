@@ -1,0 +1,93 @@
+{
+  "targetUrl": "http://127.0.0.1:4173/apps/h5-main/index.html",
+  "mode": "report_only",
+  "score": {
+    "threshold": 85,
+    "weights": {
+      "assetIntegrity": 22,
+      "layoutVisibility": 22,
+      "typographyReadability": 14,
+      "responsiveStability": 14,
+      "interactionConversion": 10,
+      "accessibilityBaseline": 8,
+      "disclosureCompliance": 10
+    }
+  },
+  "viewports": [
+    { "name": "360x780", "width": 360, "height": 780 },
+    { "name": "390x844", "width": 390, "height": 844 },
+    { "name": "430x932", "width": 430, "height": 932 }
+  ],
+  "timing": {
+    "pageWaitMs": 1400,
+    "navigationTimeoutMs": 15000
+  },
+  "selectors": {
+    "keyImages": [
+      "#brandIconPrimary",
+      "img[data-brand-icon]"
+    ],
+    "logo": [
+      "#brandIconPrimary",
+      "img[data-brand-icon]"
+    ],
+    "primaryCta": "#transformBtn",
+    "cta": "[data-cta], #transformBtn",
+    "text": [
+      "#heroTitle",
+      "#heroSub",
+      ".brand-name",
+      ".stage-phase",
+      "#secondTitle",
+      ".cap-title",
+      ".cap-desc",
+      ".btn"
+    ],
+    "fixed": [
+      ".top-strip",
+      ".sticky-cta-wrap",
+      ".live-feed"
+    ]
+  },
+  "rules": {
+    "minLogoSize": { "width": 32, "height": 32 },
+    "minTapTarget": { "width": 44, "height": 44 },
+    "minBodyFontPx": 14,
+    "minButtonFontPx": 16,
+    "maxTitleLines": 3,
+    "overflowTolerancePx": 1
+  },
+  "paramProbe": {
+    "scriptPath": "apps/h5-main/assets/js/app.js",
+    "requiredPassthrough": [
+      "src",
+      "campaign",
+      "channel",
+      "utm_source",
+      "utm_medium",
+      "utm_campaign"
+    ],
+    "requiredCustom": [
+      "lp_source"
+    ]
+  },
+  "report": {
+    "visibility": "public_only",
+    "hide_reasoning": true,
+    "language": "zh-CN",
+    "require_optimization_suggestions": true,
+    "min_suggestions": 3,
+    "forbiddenTerms": [
+      "internal_thoughts",
+      "reasoning_chain",
+      "step_by_step_thinking",
+      "思考过程",
+      "推理过程",
+      "chain of thought",
+      "cot"
+    ]
+  },
+  "output": {
+    "root": "artifacts/audits/runs"
+  }
+}

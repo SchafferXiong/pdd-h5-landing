@@ -1,0 +1,58 @@
+{
+  "topLevel": {
+    "index.html": "apps/h5-main/index.html",
+    "assets": "apps/h5-main/assets",
+    "generated_landings": "artifacts/landings",
+    "audit_reports": "artifacts/audits",
+    "compare": "experiments/landing-compare-lab",
+    "landing-audit.config.json": "config/landing-audit.config.json",
+    "scripts": "tools",
+    "DESIGN_NOTES.md": "docs/design-notes.md"
+  },
+  "compareDirectories": {
+    "compare/input": "experiments/landing-compare-lab/inputs",
+    "compare/output": "experiments/landing-compare-lab/variants",
+    "compare/report": "experiments/landing-compare-lab/analysis"
+  },
+  "compareVariants": {
+    "frontend-designer": "baseline-frontend-designer-v1",
+    "ui-designer": "baseline-ui-designer-v1",
+    "ux-designer": "baseline-ux-designer-v1",
+    "frontend-design-masterclass": "baseline-frontend-masterclass-v1",
+    "v2-hybrid": "prototype-v2-hybrid",
+    "v3-replica": "prototype-v3-replica",
+    "v3": "prototype-v3-workspace",
+    "kuaishou-v1": "kuaishou-v1-core",
+    "qianwen-v1": "qianwen-v1-core",
+    "qianwen-v2-1-office10min": "qianwen-v2-1-office-10min",
+    "qianwen-v2-3-office-cinematic": "qianwen-v2-3-office-cinematic",
+    "qianwen-v3-1-ai-office-shock": "qianwen-v3-1-ai-office-shock",
+    "qianwen-v3-2-ai-office-direct": "qianwen-v3-2-ai-office-direct",
+    "qianwen-v3-3-magazine-pop": "qianwen-v3-3-magazine-pop"
+  },
+  "scripts": {
+    "scripts/audit-landing.mjs": "tools/audit/landing-audit.mjs",
+    "scripts/generate-audited-landing.mjs": "tools/audit/landing-generate-with-audit.mjs",
+    "scripts/call_nano_banana.mjs": "tools/media/nano-banana-call.mjs",
+    "scripts/generate_videos.sh": "tools/media/videos-generate.sh",
+    "scripts/jimeng_assets_probe.mjs": "tools/jimeng/probes/assets-panel-probe.mjs",
+    "scripts/jimeng_login_elements_probe.mjs": "tools/jimeng/probes/login-elements-probe.mjs",
+    "scripts/jimeng_popup_imgsrc_probe.mjs": "tools/jimeng/probes/popup-image-source-probe.mjs",
+    "scripts/jimeng_submit_probe.mjs": "tools/jimeng/probes/submit-probe-pass1.mjs",
+    "scripts/jimeng_submit_probe2.mjs": "tools/jimeng/probes/submit-probe-pass2.mjs",
+    "scripts/jimeng_textarea_probe.mjs": "tools/jimeng/probes/textarea-probe-pass1.mjs",
+    "scripts/jimeng_textarea_probe2.mjs": "tools/jimeng/probes/textarea-probe-pass2.mjs",
+    "scripts/jimeng_inspect_video_ui.mjs": "tools/jimeng/probes/video-ui-inspect.mjs",
+    "scripts/jimeng_open_assets_tab.mjs": "tools/jimeng/probes/open-assets-tab.mjs",
+    "scripts/jimeng_live_login_waiter.mjs": "tools/jimeng/login/live-login-waiter.mjs",
+    "scripts/jimeng_qr_capture.mjs": "tools/jimeng/login/qr-capture.mjs",
+    "scripts/jimeng_qr_capture_modal.mjs": "tools/jimeng/login/qr-capture-modal.mjs",
+    "scripts/jimeng_qr_popup.mjs": "tools/jimeng/login/qr-popup-open.mjs",
+    "scripts/jimeng_verify_login_and_route.mjs": "tools/jimeng/login/verify-login-route.mjs",
+    "scripts/jimeng_login_submit_live.mjs": "tools/jimeng/login/login-submit-live.mjs",
+    "scripts/jimeng_login_then_submit_strict.mjs": "tools/jimeng/login/login-submit-strict.mjs",
+    "scripts/jimeng_blocked_login_submit.mjs": "tools/jimeng/login/login-submit-blocked.mjs",
+    "scripts/jimeng_submit_and_download.mjs": "tools/jimeng/pipeline/submit-and-download.mjs",
+    "scripts/jimeng_full_pipeline.mjs": "tools/jimeng/pipeline/full-pipeline.mjs"
+  }
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>千问 · AI办公助手</title>
+    <meta name="description" content="繁杂任务别硬扛，进入千问AI办公模式，快速拿到可交付结果。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="entry-overlay" id="entryOverlay" aria-live="polite">
+      <div class="overlay-noise"></div>
+      <article class="overlay-card">
+        <p class="overlay-tag">AI 办公告警</p>
+        <h1 id="overlayTitle">你有一批繁杂工作任务正在堆积</h1>
+        <p id="overlaySub">周报、PPT、调研同时压上来，别再手动硬扛。</p>
+        <button id="overlayAction" class="overlay-cta">立即进入AI办公模式</button>
+      </article>
+    </div>
+
+    <div class="page" id="pageRoot" data-state="idle">
+      <header class="topbar">
+        <div class="brand">
+          <img id="brandLogo" class="logo" alt="千问" />
+          <div>
+            <p class="name">千问</p>
+            <p class="sub">阿里AI助手</p>
+          </div>
+        </div>
+        <p class="proof" id="proofCounter">已有 326981 人用千问提效</p>
+      </header>
+
+      <main>
+        <section class="hero" aria-label="AI办公提效演示">
+          <p class="kicker">AI办公助手 · Qwen大模型</p>
+          <h2 id="heroTitle">任务进入AI模式后，进度会明显提升</h2>
+          <p class="hero-sub" id="heroSub">不要让繁杂任务继续吞掉你的时间。</p>
+
+          <div class="scene-switch" id="sceneTabs">
+            <button class="scene is-active" data-scene="0">混合任务</button>
+            <button class="scene" data-scene="1">周报任务</button>
+            <button class="scene" data-scene="2">PPT任务</button>
+          </div>
+
+          <article class="stage" id="stageBoard">
+            <div class="stage-media" id="stageMedia">
+              <img id="stageImage" alt="办公场景" />
+              <div class="placeholder" id="imagePlaceholder">
+                <p>AI 办公场景</p>
+                <small>图像加载中</small>
+              </div>
+            </div>
+
+            <div class="stat-grid">
+              <div class="stat">
+                <p>传统耗时</p>
+                <strong id="beforeMin">78</strong>
+                <small>分钟</small>
+              </div>
+              <div class="stat stat-highlight">
+                <p>AI交付</p>
+                <strong id="afterMin">12</strong>
+                <small>分钟</small>
+              </div>
+              <div class="stat">
+                <p>进度提升</p>
+                <strong id="boostRate">5.2x</strong>
+                <small>速度</small>
+              </div>
+            </div>
+
+            <p class="status" id="statusText">准备开始：AI办公引擎待启动</p>
+            <div class="progress-track">
+              <span id="progressFill"></span>
+            </div>
+            <p class="urgency" id="urgencyText">正在错过高效交付窗口</p>
+
+            <ul class="task-list" id="taskList"></ul>
+
+            <button class="run-btn" id="runButton">启动AI办公演示</button>
+          </article>
+
+          <div class="social-wrap">
+            <p class="social-label">提效动态</p>
+            <div class="social-ticker" id="socialTicker">杭州 李** 刚刚用千问提效 4.8x</div>
+          </div>
+        </section>
+
+        <section class="benefit-section" aria-label="利益点与三步路径">
+          <h3>为什么现在就该切换到千问</h3>
+          <div class="benefit-list" id="benefitList"></div>
+
+          <div class="steps" id="stepsList"></div>
+
+          <button class="final-cta" id="finalCta" data-source="final">立即下载千问 高效办公</button>
+        </section>
+      </main>
+
+      <button class="sticky-cta" id="stickyCta" data-source="sticky">立即下载千问 高效办公</button>
+      <p class="legal">下载即同意《用户协议》和《隐私政策》</p>
+    </div>
+
+    <script src="../../input/landing-config-qianwen-v3-1.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

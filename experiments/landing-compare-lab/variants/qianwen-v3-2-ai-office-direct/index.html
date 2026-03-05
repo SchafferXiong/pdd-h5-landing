@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>千问 · V3.2</title>
+    <meta name="description" content="进入千问AI办公模式，让繁杂任务快速变成可交付结果。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="popup" id="entryPopup">
+      <article class="popup-card">
+        <p class="popup-kicker">工作任务提醒</p>
+        <h1 id="popupTitle">很多工作任务正在挤占你的时间</h1>
+        <p id="popupSub">用千问切到AI办公模式，先把结果做出来再优化。</p>
+        <button id="popupBtn">立即进入AI办公模式</button>
+      </article>
+    </div>
+
+    <div class="page" id="pageRoot" data-phase="idle">
+      <header class="header">
+        <div class="brand">
+          <img id="logo" alt="千问" />
+          <div>
+            <p class="name">千问</p>
+            <p class="sub">阿里AI助手</p>
+          </div>
+        </div>
+        <p class="proof" id="proofText">已有 289430 人用千问提效</p>
+      </header>
+
+      <section class="hero">
+        <h2 id="title">繁杂任务，先交给AI做第一版</h2>
+        <p id="subtitle">先拿到结果，再做优化，效率会明显上来。</p>
+
+        <div class="tabs" id="tabs">
+          <button class="tab is-active" data-scene="0">混合任务</button>
+          <button class="tab" data-scene="1">周报任务</button>
+          <button class="tab" data-scene="2">调研任务</button>
+        </div>
+
+        <article class="panel">
+          <div class="visual" id="visualWrap">
+            <img id="visualImage" alt="办公场景" />
+            <div class="visual-placeholder" id="visualPlaceholder">AI 办公视觉占位</div>
+          </div>
+
+          <div class="stats">
+            <div><span>传统耗时</span><strong id="before">76</strong><small>分钟</small></div>
+            <div class="hl"><span>AI交付</span><strong id="after">11</strong><small>分钟</small></div>
+            <div><span>提效倍数</span><strong id="ratio">4.8x</strong><small>速度</small></div>
+          </div>
+
+          <p class="status" id="status">待启动 AI 办公演示</p>
+          <div class="bar"><span id="barFill"></span></div>
+
+          <ul id="taskList"></ul>
+
+          <button id="startBtn" class="start-btn">启动AI办公演示</button>
+        </article>
+
+        <p class="ticker" id="ticker">杭州 赵** 刚刚用千问提效 4.6x</p>
+      </section>
+
+      <section class="benefits">
+        <h3>三步就能切换到高效办公</h3>
+        <div id="benefitList" class="benefit-list"></div>
+        <div id="stepList" class="step-list"></div>
+        <button class="cta" data-source="final">立即下载千问 高效办公</button>
+      </section>
+
+      <button class="sticky" data-source="sticky">立即下载千问 高效办公</button>
+      <p class="legal">下载即同意《用户协议》和《隐私政策》</p>
+    </div>
+
+    <script src="../../input/landing-config-qianwen-v3-2.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

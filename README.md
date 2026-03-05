@@ -1,68 +1,85 @@
-# pdd-h5-landing
+# qianwen-h5-fragment-to-essence
 
-拼多多手机版 H5 落地页，目标是 4 秒内促成下载点击。页面已实现视频与利益点联动状态机，并内置 Android 跳转到小米商店拼多多详情页。
+千问 App H5 落地页（移动端单页），核心叙事为“碎片变精华”。
 
-## 本地结构
-- `index.html`：主页面
-- `assets/css/style.css`：视觉样式与动效
-- `assets/js/app.js`：状态机、视频同步、下载逻辑
-- `assets/manifest.json`：统一配置清单（`window.__LP_CONFIG`）
-- `assets/video/*.mp4`：4s 主片 + 8s 补片
-- `assets/prompts/*`：即梦/小云雀 AI 生成提示词包
-- `scripts/generate_videos.sh`：本地视频生成脚本（可快速替换占位视频）
-- `DESIGN_NOTES.md`：利益点来源与设计映射说明
+## Canonical 目录
+- `apps/h5-main/index.html`：主页面结构
+- `apps/h5-main/assets/css/style.css`：视觉与动画样式
+- `apps/h5-main/assets/js/app.js`：状态机、倒计时、播报、下载跳转
+- `config/landing-audit.config.json`：审核配置
+- `artifacts/landings/`：已产出的落地页快照
+- `artifacts/audits/`：审核与迭代报告
+- `experiments/landing-compare-lab/`：对比实验工作区
+- `tools/`：脚本工具（`scripts/` 为兼容 wrapper）
+- `docs/repository-index.md`：代码库索引说明
+- `docs/path-rename-map.json`：旧新路径映射
 
-## 下载跳转
-默认跳转：
-- `https://app.mi.com/details?id=com.xunmeng.pinduoduo`
+## 兼容路径（Legacy Alias）
+以下旧路径已保留为兼容别名，历史链接可继续打开：
+- `index.html -> apps/h5-main/index.html`
+- `assets -> apps/h5-main/assets`
+- `generated_landings -> artifacts/landings`
+- `audit_reports -> artifacts/audits`
+- `compare -> experiments/landing-compare-lab`
+- `landing-audit.config.json -> config/landing-audit.config.json`
+- `DESIGN_NOTES.md -> docs/design-notes.md`
 
-并透传 URL 参数：
-- `src`
-- `campaign`
-- `lp_source`（按钮来源自动注入）
-
-## 开发预览
+## 本地预览
 ```bash
 cd /Users/feng/Desktop/codexLandingPageConstructor
 python3 -m http.server 4173
-# 打开 http://127.0.0.1:4173/index.html
+# Canonical: http://127.0.0.1:4173/apps/h5-main/index.html
+# Legacy:    http://127.0.0.1:4173/index.html
 ```
 
-## 重新生成视频（本地）
+## 配置覆盖
+页面支持通过全局对象 `window.__QIANWEN_H5_CONFIG` 覆盖默认配置。
+
+```html
+<script>
+  window.__QIANWEN_H5_CONFIG = {
+    downloadUrl: 'https://app.mi.com/details?id=com.aliyun.tongyi',
+    trialSeconds: 119,
+    brand: {
+      name: '千问 App',
+      iconUrl: '/assets/img/generated/qianwen-app-icon-192.png',
+      iconAlt: '千问 App 图标'
+    }
+  };
+</script>
+```
+
+## 下载参数透传规则
+点击下载按钮时会透传：
+- `src`
+- `campaign`
+- `channel`
+- `utm_source`
+- `utm_medium`
+- `utm_campaign`
+
+并追加：
+- `lp_source`（如 `hero_ready`、`second_screen`、`sticky_bottom`）
+
+## 审核与生成命令
 ```bash
-cd /Users/feng/Desktop/codexLandingPageConstructor
-./scripts/generate_videos.sh
+npm run audit:lp
+npm run audit:lp:strict
+npm run landing:generate:audit
+npm run links:verify
 ```
 
-生成文件：
-- `assets/video/hero-main-4s.mp4` (1080x1920, 4s)
-- `assets/video/benefit-8s.mp4` (1080x1920, 8s)
-- `assets/video/hero-poster.jpg`
-- `assets/video/benefit-poster.jpg`
+## 审核配置
+- 配置文件：`config/landing-audit.config.json`
+- 默认模式：`report_only`
+- 默认目标：`http://127.0.0.1:4173/apps/h5-main/index.html`
+- 审核输出根目录：`artifacts/audits/runs`
 
-## 接入即梦 / 小云雀成片
-1. 在双平台分别按 `assets/prompts/seedance2-jimeng.md` 和 `assets/prompts/xiaoyunque.md` 生成视频。
-2. 选片标准见 `assets/prompts/selection-rubric.md`。
-3. 用最终成片覆盖：
-- `assets/video/hero-main-4s.mp4`
-- `assets/video/benefit-8s.mp4`
+## 目录约定
+- 新落地页：`artifacts/landings/<landingId>/index.html`
+- 汇总迭代报告：`artifacts/audits/<landingId>/`
+- 单轮审核报告：`artifacts/audits/runs/<landingId>/<runId>/`
 
-## GitHub Pages 发布（长期）
-```bash
-cd /Users/feng/Desktop/codexLandingPageConstructor
-git init
-git add .
-git commit -m "feat: launch pdd video-integrated mobile landing page"
-
-# 替换为你的 GitHub 用户名
-GITHUB_USER="<your-github-username>"
-
-# 创建远端仓库 pdd-h5-landing（需已登录 gh）
-gh repo create pdd-h5-landing --public --source=. --remote=origin --push
-
-# 启用 Pages（main 分支根目录）
-gh api repos/${GITHUB_USER}/pdd-h5-landing/pages -X POST -f source[branch]=main -f source[path]=/
-```
-
-最终链接：
-- `https://<your-github-username>.github.io/pdd-h5-landing/`
+## 说明
+- 历史报告中记录的旧 `file://.../generated_landings/...` 与 `http://.../compare/output/...` 链接，依赖兼容别名继续可用。
+- 若新增脚本，请优先放在 `tools/`，只有兼容目的才在 `scripts/` 新增 wrapper。
